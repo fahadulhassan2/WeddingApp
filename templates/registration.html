@@ -1,0 +1,550 @@
+{% extends "default_auth.html" %} {%block Title%}Registration{%endblock%}
+{%block content%}
+<div class="auth-signup">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-8">
+      <div class="auth-title text-center">REGISTRATION</div>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+
+  <form action="/process-registration" method="POST">
+    <div id="bridal_information" style="margin-top: 35px !important">
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label">Bride</label>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-6 p-0">
+              <div>
+                <label for="inputFirstName2"
+                  >First Name<span class="compulsory-field">*</span></label
+                >
+              </div>
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputFirstName2"
+                name="inputFirstName2"
+                required
+              />
+            </div>
+
+            <div class="col-6">
+              <div>
+                <label for="inputLastName2"
+                  >Last Name<span class="compulsory-field">*</span></label
+                >
+              </div>
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputLastName2"
+                name="inputLastName2"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row px-0" style="margin-top: 5px !important">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label text-center">Groom</label>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-6 p-0">
+              <div>
+                <label for="inputFirstName1"
+                  >First Name<span class="compulsory-field">*</span></label
+                >
+              </div>
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputFirstName1"
+                name="inputFirstName1"
+                required
+              />
+            </div>
+            <div class="col-6">
+              <div>
+                <label for="inputLastName1"
+                  >Last Name<span class="compulsory-field">*</span></label
+                >
+              </div>
+
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputLastName1"
+                name="inputLastName1"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-start">
+          <div class="previous-button-block">
+            <a href="/">
+              <button type="button" class="previous-button">Back</button>
+            </a>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <div class="previous-button-block">
+            <button
+              type="button"
+              onclick="NextSection('1')"
+              class="next-button"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="location" style="margin-top: 35px !important">
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label">Where</label>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col p-0">
+              <div>
+                <label for="inputLocation"
+                  >Location Name<span class="compulsory-field">*</span></label
+                >
+                <input
+                  type="text"
+                  class="signup-input px-2 w-100"
+                  id="inputLocation"
+                  name="inputLocation"
+                  placeholder="Four Season Hotel"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row p-0" style="margin-top: 5px !important">
+            <div class="col p-0">
+              <div>
+                <label for="inputAddress"
+                  >Address<span class="compulsory-field">*</span></label
+                >
+              </div>
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputAddress"
+                placeholder="499 MOO1 T. Vieng, Chiang Rai,, Chiang Rai, Thailand"
+                name="inputAddress"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-start">
+          <div class="previous-button-block">
+            <button
+              type="button"
+              onclick="PrevSection('2')"
+              class="previous-button"
+            >
+              Back
+            </button>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <div class="previous-button-block">
+            <button
+              type="button"
+              onclick="NextSection('2')"
+              class="next-button"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Date" style="margin-top: 35px !important">
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label"
+              >Date<span class="compulsory-field">*</span></label
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-6 p-0">
+              <div class="w-100">
+                <input
+                  type="date"
+                  class="signup-input px-2 w-100"
+                  id="inputDateOfMarriage"
+                  name="inputDateOfMarriage"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="col-6">
+              <input
+                type="time"
+                class="signup-input px-2 w-100"
+                name="inputTimeOfMarriage"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row px-0" style="margin-top: 5px !important">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label text-center">End Date</label>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-6 p-0">
+              <input
+                type="date"
+                class="signup-input px-2 w-100"
+                name="inputEndDateOfMarriage"
+              />
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+              <div class="form-group label-floating">
+                <input
+                  type="time"
+                  class="signup-input px-2 w-100"
+                  name="inputEndTimeOfMarriage"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-start">
+          <div class="previous-button-block">
+            <button
+              type="button"
+              onclick="PrevSection('3')"
+              class="previous-button"
+            >
+              Back
+            </button>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <div class="previous-button-block">
+            <button
+              type="button"
+              onclick="NextSection('3')"
+              class="next-button"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="login-info" style="margin-top: 35px !important">
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label" for="inputUsername"
+              >Username<span class="compulsory-field">*</span></label
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col p-0">
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputUsername"
+                name="inputUsername"
+                placeholder="Jamie"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label" for="inputEmail"
+              >Email<span class="compulsory-field">*</span></label
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col p-0">
+              <input
+                type="email"
+                class="signup-input px-2 w-100"
+                id="inputEmail"
+                placeholder="jamiewilliam@gmail.com"
+                name="inputEmail"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label" for="inputPassword"
+              >Password<span class="compulsory-field">*</span></label
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col p-0">
+              <input
+                type="password"
+                class="signup-input px-2 w-100"
+                id="inputPassword"
+                name="inputPassword"
+                placeholder="**********"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label" for="inputConfirmPassword"
+              >Confirm Password<span class="compulsory-field">*</span></label
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col p-0">
+              <input
+                type="password"
+                class="signup-input px-2 w-100"
+                id="inputConfirmPassword"
+                placeholder="**********"
+                name="inputConfirmPassword"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col p-0">
+          <div>
+            <label class="auth-input-label" for="inputContact"
+              >Contact Number<span class="compulsory-field">*</span></label
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col p-0">
+              <input
+                type="text"
+                class="signup-input px-2 w-100"
+                id="inputContact"
+                name="inputContact"
+                placeholder="+661123312123"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-start">
+          <div class="previous-button-block">
+            <button
+              type="button"
+              onclick="PrevSection('4')"
+              class="previous-button"
+            >
+              Back
+            </button>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <div class="previous-button-block">
+            <button type="submit" class="next-button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{%endblock%} {%block Scripts%}
+
+<script type="text/javascript">
+  document.getElementById("bridal_information").style.display = "block";
+  document.getElementById("location").style.display = "none";
+  document.getElementById("Date").style.display = "none";
+  document.getElementById("login-info").style.display = "none";
+
+  const BrideFirstName = document.getElementById("inputFirstName2");
+  const BrideLastName = document.getElementById("inputLastName2");
+  const GroomFirstName = document.getElementById("inputFirstName1");
+  const GroomLastName = document.getElementById("inputLastName1");
+
+  BrideFirstName.addEventListener("invalid", () => {
+    console.log("Invalid");
+    BrideFirstName.reportValidity("Please fill in your First Name.");
+  });
+  BrideFirstName.addEventListener("input", () => {
+    BrideFirstName.setCustomValidity("");
+    BrideFirstName.checkValidity();
+    console.log(BrideFirstName.checkValidity());
+  });
+  BrideLastName.addEventListener("invalid", () => {
+    console.log("Invalid");
+    BrideLastName.reportValidity("Please fill in your First Name.");
+  });
+  BrideLastName.addEventListener("input", () => {
+    BrideLastName.setCustomValidity("");
+    BrideLastName.checkValidity();
+    console.log(BrideLastName.checkValidity());
+  });
+
+  GroomFirstName.addEventListener("invalid", () => {
+    console.log("Invalid");
+    GroomFirstName.reportValidity("Please fill in your First Name.");
+  });
+  GroomFirstName.addEventListener("input", () => {
+    GroomFirstName.setCustomValidity("");
+    GroomFirstName.checkValidity();
+    console.log(GroomFirstName.checkValidity());
+  });
+  GroomLastName.addEventListener("invalid", () => {
+    console.log("Invalid");
+    GroomLastName.reportValidity("Please fill in your First Name.");
+  });
+  GroomLastName.addEventListener("input", () => {
+    GroomLastName.setCustomValidity("");
+    GroomLastName.checkValidity();
+    console.log(GroomLastName.checkValidity());
+  });
+  // Till here Bride and Groom's information is validated
+  const LocationName = document.getElementById("inputAddress");
+  const Address = document.getElementById("inputLocation");
+
+  LocationName.addEventListener("invalid", () => {
+    console.log("Invalid");
+    LocationName.reportValidity("Please fill in your First Name.");
+  });
+  LocationName.addEventListener("input", () => {
+    LocationName.setCustomValidity("");
+    LocationName.checkValidity();
+    console.log(LocationName.checkValidity());
+  });
+  Address.addEventListener("invalid", () => {
+    console.log("Invalid");
+    Address.reportValidity("Please fill in your First Name.");
+  });
+  Address.addEventListener("input", () => {
+    Address.setCustomValidity("");
+    Address.checkValidity();
+    console.log(Address.checkValidity());
+  });
+  // Till Here Marriage Location and Address is validated
+
+  const DateOfMarriage = document.getElementById("inputDateOfMarriage");
+
+  DateOfMarriage.addEventListener("invalid", () => {
+    console.log("Invalid");
+    DateOfMarriage.reportValidity("Please fill in your First Name.");
+  });
+  DateOfMarriage.addEventListener("input", () => {
+    DateOfMarriage.setCustomValidity("");
+    DateOfMarriage.checkValidity();
+    console.log(DateOfMarriage.checkValidity());
+  });
+
+  // Till Here Date Of Marriage is validated
+
+  // Function to move sections to next
+
+  function NextSection(sectionNo) {
+    if (sectionNo === "1") {
+      //console.log("Function is called");
+
+      console.log(BrideFirstName.checkValidity());
+      if (
+        BrideFirstName.checkValidity() &&
+        BrideLastName.checkValidity() &&
+        GroomFirstName.checkValidity() &&
+        GroomLastName.checkValidity()
+      ) {
+        document.getElementById("bridal_information").style.display = "none";
+        document.getElementById("location").style.display = "block";
+        document.getElementById("Date").style.display = "none";
+        document.getElementById("login-info").style.display = "none";
+      }
+    } else if (sectionNo == "2") {
+      if (Address.checkValidity() && LocationName.checkValidity()) {
+        document.getElementById("bridal_information").style.display = "none";
+        document.getElementById("location").style.display = "none";
+        document.getElementById("Date").style.display = "block";
+        document.getElementById("login-info").style.display = "none";
+      }
+    } else if (sectionNo == "3") {
+      if (DateOfMarriage.checkValidity()) {
+        document.getElementById("bridal_information").style.display = "none";
+        document.getElementById("location").style.display = "none";
+        document.getElementById("Date").style.display = "none";
+        document.getElementById("login-info").style.display = "block";
+      }
+    }
+  }
+  function PrevSection(sectionNo) {
+    if (sectionNo == "2") {
+      document.getElementById("bridal_information").style.display = "block";
+      document.getElementById("location").style.display = "none";
+      document.getElementById("Date").style.display = "none";
+      document.getElementById("login-info").style.display = "none";
+    } else if (sectionNo == "3") {
+      document.getElementById("bridal_information").style.display = "none";
+      document.getElementById("location").style.display = "block";
+      document.getElementById("Date").style.display = "none";
+      document.getElementById("login-info").style.display = "none";
+    } else if (sectionNo == "4") {
+      document.getElementById("bridal_information").style.display = "none";
+      document.getElementById("location").style.display = "none";
+      document.getElementById("Date").style.display = "block";
+      document.getElementById("login-info").style.display = "none";
+    } else {
+    }
+  }
+</script>
+
+{%endblock%}

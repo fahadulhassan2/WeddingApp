@@ -1,0 +1,100 @@
+{% extends "default_user.html" %} {%block title%} Vendors {% endblock %} {%block
+content%}
+
+<!--Section: Block Content-->
+<section class="mt-5 pt-5 mb-5 bg-white">
+  <div class="row">
+    <div class="col d-flex justify-content-center mb-4 mb-md-0">
+      <div class="mdb-lightbox">
+        <div class="row product-gallery mx-1">
+          <div class="col mb-0">
+            <figure class="view overlay rounded z-depth-1 main-img">
+              <img src="{{vendor[2]}}" class="img-fluid z-depth-1" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container" style="width: 90%">
+      <div class="row">
+        <div class="col" style="border-right: 1px solid #cac8c8">
+          <h5 style="color: #cfb290">{{vendor[1]}}</h5>
+
+          <p>
+            <span class="mr-1" style="color: #aeaeae"
+              ><strong>{{vendor[3]}}</strong></span
+            >
+          </p>
+          <p class="pt-1">{{vendor[5]}}</p>
+        </div>
+        <div class="col">
+          <div class="table-responsive mt-5">
+            <table class="table table-sm table-borderless mb-0 mt-4">
+              <tbody>
+                <tr>
+                  <th class="pl-0 w-25" scope="row"><strong>City</strong></th>
+                  <td>{{vendor[4]}}</td>
+                </tr>
+                {% if vendor[7] %}
+                <tr>
+                  <th class="pl-0 w-25" scope="row">
+                    <strong>Phone Number</strong>
+                  </th>
+
+                  <td>{{vendor[7]}}</td>
+                </tr>
+                {% endif %} {% if vendor[6] %}
+                <tr>
+                  <th class="pl-0 w-25" scope="row"><strong>Email</strong></th>
+
+                  <td>{{vendor[6]}}</td>
+                </tr>
+                {% endif %} {% if vendor[8] %}
+                <tr>
+                  <th class="pl-0 w-25" scope="row">
+                    <strong>Website</strong>
+                  </th>
+
+                  <td><a href="https://{{vendor[8]}}">{{vendor[8]}}</a></td>
+                </tr>
+                {% endif %} {% if vendor[9] %}
+                <tr>
+                  <th class="pl-0 w-25" scope="row">
+                    <strong>Instagram</strong>
+                  </th>
+
+                  <td><a href="{{vendor[9]}}">{{vendor[9]}}</a></td>
+                </tr>
+                {% endif %} {% if vendor[10] %}
+                <tr>
+                  <th class="pl-0 w-25" scope="row">
+                    <strong>Facebook</strong>
+                  </th>
+
+                  <td><a href="{{vendor[10]}}">{{vendor[10]}}</a></td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="/vendors">
+          <button
+            class="px-5 my-3 btn text-white"
+            style="border: 1px solid #ceb08d; background-color: #e4d3c0"
+          >
+            Back
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<!--Section: Block Content-->
+
+{% endblock %}

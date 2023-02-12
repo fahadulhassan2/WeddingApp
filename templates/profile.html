@@ -1,0 +1,431 @@
+{% extends "default_user.html" %} {%block title%} Profile {% endblock %} {%block
+content%}
+<div class="row">
+  <div class="col pt-2 pb-3">
+    <div class="sidenav p-2">
+      <h4 class="d-flex justify-content-center pb-5">
+        <strong>Settings</strong>
+      </h4>
+      <a class="d-flex justify-content-center mt-3" href="?setting=0"
+        >Your Personal Information</a
+      >
+      <a class="d-flex justify-content-center" href="?setting=1"
+        >Contact Information</a
+      >
+      <a class="d-flex justify-content-center" href="?setting=2"
+        >Wedding Information</a
+      >
+      <a class="d-flex justify-content-center" href="?setting=3"
+        >Change Password</a
+      >
+      <a class="d-flex justify-content-center" href="?setting=4">URLs</a>
+      <a class="d-flex justify-content-center" href="?setting=5">Privacy</a>
+      <a class="d-flex justify-content-center" href="/logout">Logout</a>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="personal-information">
+    <div class="container w-100">
+      <form action="/update_profile" method="POST">
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">
+          Profile Information
+        </h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="inputFirstName1" class="col col-form-label"
+            >Groom First Name</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputFirstName1"
+              value="{{session['groomFirstName']}}"
+              id="inputFirstName1"
+              required
+            />
+          </div>
+          <label for="inputLastName1" class="col col-form-label"
+            >Groom Last Name</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputLastName1"
+              value="{{session['groomLastName']}}"
+              id="inputLastName1"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="inputFirstName2" class="col col-form-label"
+            >Bride First Name</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputFirstName2"
+              value="{{session['brideFirstName']}}"
+              id="inputFirstName2"
+              required
+            />
+          </div>
+          <label for="inputLastName2" class="col col-form-label"
+            >Bride Last Name</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputLastName2"
+              value="{{session['brideLastName']}}"
+              id="inputLastName2"
+              required
+            />
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_personal_information"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="contact-information">
+    <div class="container w-100">
+      <form action="/update_profile" method="POST">
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">
+          Contact Information
+        </h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="inputEmail" class="col col-form-label">Email</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="email"
+              name="inputEmail"
+              value="{{session['email']}}"
+              id="inputEmail"
+              required
+            />
+          </div>
+          <label for="inputContact" class="col col-form-label"
+            >Contact Number</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputContact"
+              value="{{session['contactNumber']}}"
+              id="inputContact"
+              required
+            />
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_contact_info"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="edit_wedding">
+    <div class="container w-100">
+      <form action="/update_profile" method="POST">
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">
+          Wedding Information
+        </h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="inputLocation" class="col col-form-label"
+            >Marriage Location</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputLocation"
+              value="{{session['Location']}}"
+              id="inputLocation"
+              required
+            />
+          </div>
+          <label for="inputAddress" class="col col-form-label"
+            >Marriage Address</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="inputAddress"
+              value="{{session['Address']}}"
+              id="inputAddress"
+              required
+            />
+          </div>
+          <label for="txtEndDate" class="col col-form-label"
+            >Marriage Date</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              name="inputDate"
+              type="date"
+              value="{{session['dateOfMarriage']}}"
+              id="txtEndDate"
+              required
+            />
+          </div>
+          <label for="txtDate" class="col col-form-label">Start Time</label>
+          <div class="col">
+            <input
+              class="form-control"
+              name="inputTime"
+              type="time"
+              value="{{session['timeOfMarriage']}}"
+              id="txtDate"
+              required
+            />
+          </div>
+          <label for="txtEndDate" class="col col-form-label"
+            >Marriage End Date</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              name="inputEndDate"
+              type="date"
+              value="{{session['endDateOfMarriage']}}"
+              id="txtEndDate"
+              required
+            />
+          </div>
+          <label for="txtEndTime" class="col col-form-label">End Time</label>
+          <div class="col">
+            <input
+              class="form-control"
+              name="inputEndTime"
+              type="time"
+              value="{{session['endTimeOfMarriage']}}"
+              id="txtEndTime"
+              required
+            />
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_wedding_informaton"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="change_password">
+    <div class="container w-100">
+      <form action="/update_profile" method="POST">
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">Change Password</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group">
+          <label for="inputPassword" class="col col-form-label">Password</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="password"
+              id="inputPassword"
+              name="inputPassword"
+              required
+            />
+          </div>
+          <label for="inputPassword1" class="col col-form-label"
+            >Confirm Password</label
+          >
+          <div class="col">
+            <input
+              class="form-control"
+              type="password"
+              id="inputPassword1"
+              name="inputPassword1"
+              required
+            />
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_password"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="urls">
+    <div class="container w-100">
+      <form action="/update_profile" method="POST">
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">URL</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group">
+          <label for="inputURL" class="col col-form-label">Website URL</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              id="inputURL"
+              name="inputURL"
+              value="{{session['url']}}"
+              required
+            />
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_URL"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block scriptPage %}
+<script>
+  $(document).ready(function () {
+    const params = new URLSearchParams(window.location.search);
+    result = params.get("setting");
+    GroupMethod(result);
+  });
+  function GroupMethod(x) {
+    if (x === 0) {
+      document.getElementById("personal-information").style.display = "block";
+      document.getElementById("contact-information").style.display = "none";
+      document.getElementById("edit_wedding").style.display = "none";
+      document.getElementById("change_password").style.display = "none";
+      document.getElementById("urls").style.display = "none";
+      document.getElementById("policy").style.display = "none";
+    } else if (x === "1") {
+      document.getElementById("personal-information").style.display = "none";
+      document.getElementById("contact-information").style.display = "block";
+      document.getElementById("edit_wedding").style.display = "none";
+      document.getElementById("change_password").style.display = "none";
+      document.getElementById("urls").style.display = "none";
+      document.getElementById("policy").style.display = "none";
+    } else if (x === "2") {
+      document.getElementById("personal-information").style.display = "none";
+      document.getElementById("contact-information").style.display = "none";
+      document.getElementById("edit_wedding").style.display = "block";
+      document.getElementById("change_password").style.display = "none";
+      document.getElementById("urls").style.display = "none";
+      document.getElementById("policy").style.display = "none";
+    } else if (x === "3") {
+      document.getElementById("personal-information").style.display = "none";
+      document.getElementById("contact-information").style.display = "none";
+      document.getElementById("edit_wedding").style.display = "none";
+      document.getElementById("change_password").style.display = "block";
+      document.getElementById("urls").style.display = "none";
+      document.getElementById("policy").style.display = "none";
+    } else if (x === "4") {
+      document.getElementById("personal-information").style.display = "none";
+      document.getElementById("contact-information").style.display = "none";
+      document.getElementById("edit_wedding").style.display = "none";
+      document.getElementById("change_password").style.display = "none";
+      document.getElementById("urls").style.display = "block";
+      document.getElementById("policy").style.display = "none";
+    } else if (x === "5") {
+      document.getElementById("personal-information").style.display = "none";
+      document.getElementById("contact-information").style.display = "none";
+      document.getElementById("edit_wedding").style.display = "none";
+      document.getElementById("change_password").style.display = "none";
+      document.getElementById("urls").style.display = "none";
+      document.getElementById("policy").style.display = "block";
+    } else {
+      document.getElementById("personal-information").style.display = "block";
+      document.getElementById("contact-information").style.display = "none";
+      document.getElementById("edit_wedding").style.display = "none";
+      document.getElementById("change_password").style.display = "none";
+      document.getElementById("urls").style.display = "none";
+      document.getElementById("policy").style.display = "none";
+    }
+    return;
+  }
+</script>
+
+{% endblock %}

@@ -1,0 +1,192 @@
+{% extends "default.html" %} {% block title %}Home{% endblock %} {% block head
+%}
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #64c7ff;
+  }
+
+  .main {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    background: #64c7ff;
+  }
+  .try-our-product {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 50px;
+    background-color: #ffffff;
+    color: #333333;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+  }
+  .about-us,
+  .why-opteam,
+  .our-clients {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 50px;
+    background: #ffffff;
+    color: #333333;
+    border-top: 5px solid #64c7ff;
+  }
+  .try-our-product .product-content ul {
+    list-style-type: none;
+    padding: 0px;
+    font-size: large;
+    font-weight: 600;
+  }
+  .try-now-btn {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #53b0df;
+    border: 5px solid #85afc7;
+    color: #b7e1f9;
+  }
+
+  .about-us .try-now-btn {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #53b0df;
+    border: 5px solid #85afc7;
+    color: #b7e1f9;
+  }
+  .btn-primary {
+    border-radius: 5px;
+    width: auto;
+    border: none;
+    background-color: #07717c;
+  }
+  .login-button a {
+    color: #07717c;
+  }
+  header {
+    background: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #07717c;
+  }
+</style>
+{% endblock %} {% block navigation %}
+<header>
+  <nav>
+    <ul>
+      <li class="btn-primary"><a href="#tryproduct">Try Our Product</a></li>
+      <li class="btn-primary"><a href="#aboutus">About Us</a></li>
+      <li class="btn-primary"><a href="#whyopteam">Why OpTeam?</a></li>
+      <li class="btn-primary"><a href="#ourclients">Our Clients</a></li>
+    </ul>
+  </nav>
+  <div class="login-button"><a href="/signup">Log in / Sign up</a></div>
+</header>
+{% endblock %} {% block cover %}
+<div class="cover">
+  <center>
+    <img
+      src="../static/graphics/OptTeamLogo1.jpg"
+      class="img-fluid"
+      alt="OpTeamLogo"
+      style="width: auto"
+    />
+  </center>
+</div>
+{% endblock %} {% block content %}
+<div class="main">
+  <section class="try-our-product" id="tryproduct">
+    <div class="product-content">
+      <h2>
+        <strong>Generate your balanced groups in few minutes...</strong>
+      </h2>
+      <ul>
+        <li>Enter your prefernce to group by,</li>
+        <li>
+          Add members and tell us in which method you want to split them into
+          groups.
+        </li>
+        <li>one click and you'll get your well balanced teams !</li>
+      </ul>
+    </div>
+    <div class="product-button text-center mt-5">
+      <a href="/signup"
+        ><input
+          class="shadow tn btn-primary rounded-5 p-3 pl-5 pr-5 try-now-btn"
+          type="button"
+          value="TRY NOW"
+      /></a>
+    </div>
+  </section>
+  <section class="about-us" id="aboutus">
+    <div class="product-content">
+      <h2>
+        <strong>Generate your balanced groups in few minutes...</strong>
+      </h2>
+      <ul>
+        <li>Enter your prefernce to group by,</li>
+        <li>
+          Add members and tell us in which method you want to split them into
+          groups.
+        </li>
+        <li>one click and you'll get your well balanced teams !</li>
+      </ul>
+    </div>
+    <div class="product-button text-center mt-5">
+      <a href="/signup"
+        ><input
+          class="shadow tn btn-primary rounded-5 p-3 pl-5 pr-5 try-now-btn"
+          type="button"
+          value="TRY NOW"
+      /></a>
+    </div>
+  </section>
+  <section class="why-opteam" id="whyopteam">
+    <div class="product-content">
+      <h2>
+        <strong>Generate your balanced groups in few minutes...</strong>
+      </h2>
+      <ul>
+        <li>Enter your prefernce to group by,</li>
+        <li>
+          Add members and tell us in which method you want to split them into
+          groups.
+        </li>
+        <li>one click and you'll get your well balanced teams !</li>
+      </ul>
+    </div>
+    <div class="product-button text-center mt-5">
+      <a href="/signup"
+        ><input
+          class="shadow tn btn-primary rounded-5 p-3 pl-5 pr-5 try-now-btn"
+          type="button"
+          value="TRY NOW"
+      /></a>
+    </div>
+  </section>
+  <section class="our-clients" id="ourclients">
+    <div class="product-content">
+      <h2>
+        <strong>Generate your balanced groups in few minutes...</strong>
+      </h2>
+      <ul>
+        <li>Enter your prefernce to group by,</li>
+        <li>
+          Add members and tell us in which method you want to split them into
+          groups.
+        </li>
+        <li>one click and you'll get your well balanced teams !</li>
+      </ul>
+    </div>
+    <div class="product-button text-center mt-5">
+      <a href="/signup"
+        ><input
+          class="shadow tn btn-primary rounded-5 p-3 pl-5 pr-5 try-now-btn"
+          type="button"
+          value="TRY NOW"
+      /></a>
+    </div>
+  </section>
+</div>
+{% endblock %}

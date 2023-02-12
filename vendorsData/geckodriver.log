@@ -1,0 +1,433 @@
+1613826100415	geckodriver	INFO	Listening on 127.0.0.1:54702
+1613826107787	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileIFH2TX"
+1613826169898	geckodriver	INFO	Listening on 127.0.0.1:55054
+1613826173001	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile1J3dDz"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613826184983	Marionette	INFO	Listening on port 55063
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613826185829	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613826185964	Marionette	ERROR	[15] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+[Parent 16644, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613826868020	Marionette	INFO	Stopped listening on port 55063
+dule)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613826745788	Marionette	INFO	Listening on port 56585
+1613826746732	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613826746842	Marionette	ERROR	[15] No reply from Marionette:Register
+1613826893451	Marionette	INFO	Stopped listening on port 56585
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613826894556	geckodriver	INFO	Listening on 127.0.0.1:57124
+1613826897842	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile4RZRcv"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613826910921	Marionette	INFO	Listening on port 57141
+1613826911229	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613826911248	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+[Parent 10944, IPC I/O Parent] WARNING: file /builds/worker/1613827149692	mozrunner::runner	INFO	Running command: "C:\\Prog1613827152648	Marionette	INFO	Stopped listening on port 57141
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827159461	Marionette	INFO	Listening on port 57938
+1613827159561	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827159644	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827248601	Marionette	INFO	Stopped listening on port 57938
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613827320515	geckodriver	INFO	Listening on 127.0.0.1:58318
+1613827323640	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilev3PYSx"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827330933	Marionette	INFO	Listening on port 58332
+1613827331333	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827331352	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: "Error while calling actor 'pagestyle's method 'getApplied'" "node is null"
+console.error: "getApplied@resource://devtools/server/actors/page-style.js:571:5\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:68:16\n"
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:358:10
+
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.child3/pagestyle26 (resource://devtools/server/actors/page-style.js:571:5)", "resource://devtools/shared/protocol/Front.js", 361))
+JavaScript error: https://www.bridestory.com/all-countries, line 58: ReferenceError: Raven is not defined
+JavaScript error: https://www.bridestory.com/scripts/desktop/id/vendorlist.1613627209.min.js, line 34: TypeError: e.data.seo is undefined
+1613827481398	Marionette	INFO	Stopped listening on port 58332
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613827582632	geckodriver	INFO	Listening on 127.0.0.1:58989
+1613827585723	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilep37Rpz"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827593302	Marionette	INFO	Listening on port 59002
+1613827593787	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827593816	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+JavaScript error: resource://activity-stream/lib/ASRouter.js1613827745935	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile9DipjX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827752726	Marionette	INFO	Listening on port 59377
+1613827753341	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827753422	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827792676	Marionette	INFO	Stopped listening on port 59371613827793042	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilerthqUQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827801730	Marionette	INFO	Listening on port 59528
+1613827802303	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827802324	Marionette	ERROR	[15] No reply from Marionette:Register
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.bridestory.com"
+1613827961743	Marionette	INFO	Stopped listening on port 59528
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilezYA3D5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827891236	Marionette	INFO	Listening on port 59812
+1613827891407	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827891477	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+1613827963661	Marionette	INFO	Stopped listening on port 59812
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilegSWBZ2"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613827973925	Marionette	INFO	Listening on port 60126
+1613827974327	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613827974347	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+JavaScript error: resource://activity-stream/lib/ASRouter.js1613828013373	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile7JOSTd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613828020539	Marionette	INFO	Listening on port 60308
+1613828021119	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613828021138	Marionette	ERROR	[15] No reply from Marionette:Register
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+console.error: "Tried to send a 'getApplied' method reply on an already destroyed actor 'pagestyle'"
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1613828692104	Marionette	INFO	Stopped listening on port 60308
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ocal\\Temp\\rust_mozprofile2ci4ZL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613828150965	Marionette	INFO	Listening on port 60614
+1613828151197	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613828151227	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/thailand, line 58: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/8c26ec779f9f.js, line 204: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/8c26ec779f9f.js, line 204: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/8c26ec779f9f.js, line 204: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://www.instagram.com/static/bundles/es6/ConsumerLibCommons.js/8c26ec779f9f.js, line 204: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: resource:///modules/FaviconLoader.jsm, line 596: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+JavaScript error: resource:///modules/FaviconLoader.jsm, line 596: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x5A000D,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x5A000D,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x5A000D,name=PHttpBackgroundChannel::Msg___delete__) Channel error: cannot send/recv
+
+[Parent 14344, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613828614838	Marionette	INFO	Stopped listening on port 60611613828617880	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilecD6UCy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613828635939	Marionette	INFO	Listening on port 62231
+1613828636915	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613828636932	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613828698463	Marionette	INFO	Stopped listening on port 62231
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilerrIz6F"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613828683783	Marionette	INFO	Listening on port 62529
+1613828684215	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613828684237	Marionette	ERROR	[15] No reply from Marionette:Register
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613829121835	Marionette	INFO	Stopped listening on port 62529
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613829154350	geckodriver	INFO	Listening on 127.0.0.1:63269
+1613829157378	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile44hFhA"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613829164590	Marionette	INFO	Listening on port 63281
+1613829164790	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613829164812	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: resource://activity-stream/lib/ASRouter.js1613829247228	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileSqgZEQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613829255841	Marionette	INFO	Listening on port 63435
+1613829256441	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613829256489	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1613829794256	Marionette	INFO	Stopped listening on port 63435
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ocal\\Temp\\rust_mozprofilegTxDYR"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613829625140	Marionette	INFO	Listening on port 64207
+1613829625447	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613829625461	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613829638522	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1613829644381	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+[Parent 5088, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 5088, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613829717238	Marionette	INFO	Stopped listening on port 64207
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1613829763530	geckodriver	INFO	Listening on 127.0.0.1:64807
+1613829766635	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile2v8WUU"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613829784779	Marionette	INFO	Listening on port 64831
+1613829786505	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613829786523	Marionette	ERROR	[18] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613829798006	Marionette	ERROR	[4294967297] No reply from Marionette:Register
+JavaScript error: https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.bridestory.com&rpcToken=2081676845.3160992&clearCache=1, line 1: ReferenceError: lso is not defined
+JavaScript error: resource://activity-stream/lib/ASRouter.js1613830019626	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofile4gLO5B"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613830044244	Marionette	INFO	Listening on port 49153
+1613830046123	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830046138	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613830066102	Marionette	ERROR	[2147483649] No reply from Marionette:Register
+JavaScript error: resource://gre/modules/UrlClassifierListMa1613830083463	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local1613830086937	Marionette	INFO	Sconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830097441	Marionette	INFO	Listening on port 49462
+1613830097509	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830097527	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830108046	Marionette	ERROR	[2147483649] No reply from Marionette:Register
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1613830242327	Marionette	INFO	Stopped listening on port 49462
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5F0005,name=PImageBridge::Msg_WillClose) Channel error: cannot send/recv
+
+s/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613830197162	Marionette	INFO	Listening on port 50483
+1613830197542	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830197562	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613830220880	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+JavaScript error: resource://activity-stream/lib/ASRouter.js1613830293856	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no1613830295777	Marionette	INFO	Stopped listening on port 50483
+
+###!!! [Child][RunMconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830303766	Marionette	INFO	Listening on port 50849
+1613830304131	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830304159	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830322433	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+1613830514391	Marionette	INFO	Stopped listening on port 50849
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileV1ubfg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830513665	Marionette	INFO	Listening on port 51229
+1613830514015	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830514042	Marionette	ERROR	[15] No reply from Marionette:Register
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613830536497	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_untruconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830575201	Marionette	INFO	Listening on port 51397
+1613830575357	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830575374	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830591443	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+1613830714866	Marionette	INFO	Stopped listening on port 51397
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileEVXbnY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830721828	Marionette	INFO	Listening on port 51667
+1613830722223	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830722241	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613830741122	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+JavaScript error: resource://activity-stream/lib/ASRouter.js1613830760163	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileEuHIod"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830766463	Marionette	INFO	Listening on port 51847
+1613830766521	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830766538	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830783897	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1613830929901	Marionette	INFO	Stopped listening on port 51847
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+Error("", "(unknown module)"))
+1613830923108	Marionette	INFO	Listening on port 52114
+1613830923158	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613830923198	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613830940920	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:358:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1613831478493	Marionette	INFO	Stopped listening on port 52114
+
+###!!! [Child][RunMconsole.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613831484026	Marionette	INFO	Listening on port 53286
+1613831484555	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613831484574	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613831502375	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+1613831654944	Marionette	INFO	Stopped listening on port 53286
+1613831788116	geckodriver	INFO	Listening on 127.0.0.1:53753
+1613831791136	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileFZ0Ky1"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613831802272	Marionette	INFO	Listening on port 53769
+1613831802685	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613831802704	Marionette	ERROR	[18] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[Parent 15972, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613833586313	Marionette	INFO	Stopped listening on port 53769
+ofile7s5BHW"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613832213665	Marionette	INFO	Listening on port 54857
+1613832213747	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613832213795	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613832232375	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:358:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2241))
+[Parent 8804, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 8804, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613832595721	Marionette	INFO	Stopped listening on port 54857
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5F0005,name=PImageBridge::Msg_WillClose) Channel error: cannot send/recv
+
+1613832599635	geckodriver	INFO	Listening on 127.0.0.1:56169
+1613832603568	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilest9Uk8"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613832623709	Marionette	INFO	Listening on port 56201
+1613832624419	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613832624430	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613832645440	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+[Parent 12360, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613833289718	Marionette	INFO	Stopped listening on port 56201
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613833309546	Marionette	INFO	Listening on port 58490
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613833310675	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613833310692	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613833329329	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+[Parent 14324, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1613833585534	Marionette	INFO	Stopped listening on port 58491613833591364	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileiu2nhA"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 775))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 422))
+1613833614954	Marionette	INFO	Listening on port 59631
+1613833615615	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613833615633	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613833633973	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+1613833731655	Marionette	INFO	Stopped listening on port 59631
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofilekX8tzZ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613833737482	Marionette	INFO	Listening on port 60001
+1613833737619	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613833737640	Marionette	ERROR	[15] No reply from Marionette:Register
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613833755294	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+1613833971730	Marionette	INFO	Stopped listening on port 60001613833972182	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\i1501\\AppData\\Local\\Temp\\rust_mozprofileY5wNmH"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1613833978670	Marionette	INFO	Listening on port 60818
+1613833979151	Marionette	WARN	TLS certificate errors will be ignored for this session
+1613833979186	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://www.bridestory.com/patson-decor, line 62: ReferenceError: Raven is not defined
+1613833998548	Marionette	ERROR	[2147483650] No reply from Marionette:Register
+1613834480578	Marionette	INFO	Stopped listening on port 60818

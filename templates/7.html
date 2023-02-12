@@ -1,0 +1,734 @@
+{% extends "invitation_template.html" %} {% block links %}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="./static/7/style.css" />
+{% endblock %} {% block content %}
+<div class="container-fluid-fluid">
+  <header>
+    <!-- Background image -->
+    <div
+      class="p-5 text-center bg-image container-fluid"
+      style="
+        background: url('./static/7/graphics/banner-img1-1860x940_1506c8f432bc8142adcf778620ec2596.jpg')
+          no-repeat;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 95vh;
+      "
+    >
+      <div
+        class="mask w-100 h-100 py-5"
+        style="background-color: rgba(0, 0, 0, 0.6)"
+      >
+        <div
+          class="d-flex justify-content-center align-items-center h-100 mt-5"
+        >
+          <div class="text-white">
+            <h1 class="display-1 fw-bold">Britanny & Steven</h1>
+            <h4 class="display-4 fw-bold">September 11, 2019</h4>
+            <img
+              class="image-fluid w-20 h-50"
+              src="./static/7/graphics/flower-bottom.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <!-- header -->
+
+  <div class="py-5 mx-auto">
+    <div class="row py-2 text-center">
+      <div class="col-lg-4 col-12 mt-5">
+        <h1 class="fw-bold display-4 px-4 pt-5 text-end" style="color: #e39696">
+          Brittany Smith
+        </h1>
+        <div class="text-end px-4">
+          <svg
+            style="width: 10%; height: 10%"
+            class="py-3"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p class="text-end px-4">
+          It’s not too often that you find someone who can finish your
+          sentences, let alone correct your improper use of a Dumb and Dumber
+          quote.
+        </p>
+      </div>
+      <div class="mx-auto col-lg-4 col-12 bg-image">
+        <img
+          class="text-center img-fluid"
+          src="./static/7/graphics/couple.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-4 col-12 mt-5">
+        <h1
+          class="fw-bold display-4 px-4 pt-5 text-start"
+          style="color: #e39696"
+        >
+          Steven Taylor
+        </h1>
+        <div class="text-start px-4">
+          <svg
+            style="width: 10%; height: 10%"
+            class="py-3"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p class="text-start px-4">
+          It’s not too often that you find someone who can finish your
+          sentences, let alone correct your improper use of a Dumb and Dumber
+          quote..
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- our story -->
+  <div class="container">
+    <h1 class="fw-bold display-2 pt-5 text-center" style="color: #e39696">
+      Our Love Story
+    </h1>
+    <div class="text-center">
+      <svg
+        style="width: 10%; height: 10%"
+        class="py-3"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82 12"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+              stroke: #e39696;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-8.2 -9.1)">
+          <path
+            class="a"
+            d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+            transform="translate(0 0)"
+          ></path>
+          <g transform="translate(49.2 10.1)">
+            <path
+              class="a"
+              d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+              transform="translate(-49 -10.1)"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <p class="text-center">
+      It's not too often that you find someone who can finish your sentences,
+      let alone correct <br />your improper use of a Dumb and Dumber quote.
+      Whether it be a lazy Sunday on the <br />
+      couch or a run outside in the Summer, we are always happy just being
+      together. What <br />
+      started off as a friendship soon grew into something much more than
+      coincidence.
+    </p>
+    <div class="mx-auto m-5 text-center">
+      <div class="row mx-auto mt-5 couple">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-12 mx-auto g-0">
+          <img
+            class="img-responsive h-70 w-75 shadow-lg bg-white rounded"
+            src="./static/7/graphics/story-post-img1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 col-12 mx-auto mt-5 pt-5">
+          <h3 class="fw-bold display-6" style="color: #e39696">
+            Where it all Started
+          </h3>
+          <svg
+            style="width: 10%; height: 5%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <p class="px-2">
+            We both signed up to go on a missionary trip down to Mexico with our
+            church, Rock Harbor. I was in the same van as Tiffaney on the way
+            down there, so naturally I was loud and obnoxious the whole ride
+            there (clearly a good flirting technique). Throughout the trip we
+            got to know each …
+          </p>
+        </div>
+      </div>
+      <div class="row mt-5 mx-auto">
+        <div class="col-lg-6 col-md-8 col-sm-12 col-12 mx-auto mt-5 pt-5">
+          <h3 class="fw-bold display-6" style="color: #e39696">
+            The Dating Game
+          </h3>
+          <svg
+            style="width: 10%; height: 5%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <p class="px-2">
+            When we got back from Mexico, Tiffaney ignored me. Probably
+            something about me being the loud annoying guy the whole car ride to
+            Mexico. However, I didn’t give up. I sent her a message asking her
+            to get coffee with me and after her friend convinced her to go, she
+            said Yes… This was the first of many yeses. Date after date we
+            explored the vast array of foods and coffee.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-4 col-sm-12 col-12 g-0">
+          <img
+            class="img-responsive h-70 w-75 shadow-lg bg-white rounded"
+            src="./static/7/graphics/story-post-img2.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="row mx-auto mt-5 d-flex justify-content-center items-center">
+        <div class="col-lg-6 col-md-4 col-sm-12 col-12 mx-auto g-0">
+          <img
+            class="img-responsive h-70 w-75 shadow-lg bg-white rounded"
+            src="./static/7/graphics/story-post-img3.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 col-12 mx-auto mt-5 pt-5">
+          <h3 class="fw-bold display-6" style="color: #e39696">
+            Becoming “Offical”​
+          </h3>
+          <svg
+            style="width: 10%; height: 5%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <p class="px-2">
+            A few months flew by and she left me. Not really but she did fly to
+            Europe with her friends to explore the other side of the world. The
+            time and distance apart caused us to really realize how much we
+            loved each other. We were now in a relationship. Once she returned
+            from her trip, we spent the day at Disneyland which turned into many
+            more exciting days together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="containe w-50 mt-5 shadow-lg bg-white rounded mx-auto">
+    <img
+      class="img-fluid w-100"
+      src="./static/7/graphics/1-490x300.jpg"
+      alt=""
+    />
+    <h1 class="text-center mt-4 display-4" style="color: #e39696">
+      The Question
+    </h1>
+    <div class="text-center my-2">
+      <svg
+        style="width: 10%; height: 5%"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82 12"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+              stroke: #e39696;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-8.2 -9.1)">
+          <path
+            class="a"
+            d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+            transform="translate(0 0)"
+          ></path>
+          <g transform="translate(49.2 10.1)">
+            <path
+              class="a"
+              d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+              transform="translate(-49 -10.1)"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <p class="text-center px-5 pb-5 fs-5">
+      January 15th was the day her life changed forever. I planned a series of
+      surprises which she thought were all part of a grand birthday surprise; a
+      day for her to celebrate her birthday with her friends. After lunch, she
+      was driven to the top of the world where I proposed. This became the
+      profound moment reshaping our future forever and planning our destiny
+      together
+    </p>
+  </div>
+
+  <!-- Services -->
+
+  <div class="text-center">
+    <h1 class="mb-3 my-5 fw-bold display-2 pt-5" style="color: #e39696">
+      Our Services
+    </h1>
+    <div class="container-fluid pb-5">
+      <svg
+        style="width: 10%; height: 5%"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82 12"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+              stroke: #e39696;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-8.2 -9.1)">
+          <path
+            class="a"
+            d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+            transform="translate(0 0)"
+          ></path>
+          <g transform="translate(49.2 10.1)">
+            <path
+              class="a"
+              d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+              transform="translate(-49 -10.1)"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <p class="px-5 pb-5">
+      Spark a little inspo with these stores, whether you’re upgrading or just
+      starting out.
+    </p>
+  </div>
+  <div class="row text-center container mx-auto py-4">
+    <div class="col-lg-3 col-md-6 col-12 mb-4 mx-auto">
+      <a href="#" class="d-block h-100 w-80">
+        <img
+          class="img-container img-thumbnail"
+          src="./static/7/graphics/logo6@2x.png"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 mb-4 mx-auto">
+      <a href="#" class="d-block h-100 w-80">
+        <img
+          class="img-container img-thumbnail"
+          src="./static/7/graphics/logo3@2x.png"
+          alt=""
+        />
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-12 mb-4 mx-auto">
+      <a href="#" class="d-block h-100 w-80">
+        <img
+          class="img-container-fluid img-thumbnail"
+          src="./static/7/graphics/logo4@2x.png"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 mb-4 mx-auto">
+      <a href="#" class="d-block h-100 w-80">
+        <img
+          class="img-container-fluid img-thumbnail"
+          src="./static/7/graphics/logo5@2x.png"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-6 col-12 mb-4 mx-auto">
+      <a href="#" class="d-block h-100 w-80">
+        <img
+          class="img-container-fluid img-thumbnail"
+          src="./grapics/logo7@2x.png"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: rgb(151, 149, 149)">
+    <h1
+      class="mb-3 my-5 fw-bold display-2 pt-5 text-center"
+      style="color: #ffffff"
+    >
+      Adventure Begins
+    </h1>
+    <div class="pb-5" style="background-image: url('./static/7/graphics')">
+      <h1 class="text-center">
+        Love is the best thing in the world, <br />
+        and the thing that lives the longest
+      </h1>
+    </div>
+  </div>
+
+  <!-- our honor -->
+  <div class="container-fluid">
+    <h1
+      class="mb-3 mt-5 fw-bold display-2 pt-5 text-center"
+      style="color: #e39696"
+    >
+      Wedding Officiant
+    </h1>
+    <div class="container-fluid pb-5 text-center">
+      <svg
+        style="width: 10%; height: 5%"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82 12"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+              stroke: #e39696;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-8.2 -9.1)">
+          <path
+            class="a"
+            d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+            transform="translate(0 0)"
+          ></path>
+          <g transform="translate(49.2 10.1)">
+            <path
+              class="a"
+              d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+              transform="translate(-49 -10.1)"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="row mx-auto py-5">
+      <div class="col-lg-4 g-0 col-12 mx-auto">
+        <img class="img-fluid" src="./static/7/graphics/mail.png" alt="" />
+        <h1 class="text-center mt-4 display-4" style="color: #e39696">
+          Best Man
+        </h1>
+        <div class="text-center my-2">
+          <svg
+            style="width: 20%; height: 5%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p class="fw-bold fs-4 text-center">Louie Volkman</p>
+        <p class="text-center fs-5 pb-5">
+          Vomit free since 1993 Trust that he’ll do <br />
+          anything to maintain that record
+        </p>
+      </div>
+
+      <div class="col-lg-4 g-0 col-12 mx-auto">
+        <img class="img-fluid" src="./static/7/graphics/femail.png" alt="" />
+        <h1 class="text-center mt-4 display-4" style="color: #e39696">
+          Matron of Honor
+        </h1>
+        <div class="text-center my-2">
+          <svg
+            style="width: 20%; height: 5%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 82 12"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: none;
+                  stroke: #e39696;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+            <g transform="translate(-8.2 -9.1)">
+              <path
+                class="a"
+                d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+                transform="translate(0 0)"
+              ></path>
+              <g transform="translate(49.2 10.1)">
+                <path
+                  class="a"
+                  d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+                  transform="translate(-49 -10.1)"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p class="fw-bold fs-4 text-center">Daphnee Schoen</p>
+        <p class="text-center fs-5">
+          Minnosota State Loon Calling Champion of <br />
+          1994. No, seriously.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact us -->
+  <div
+    class="container-fluid text-center pb-3"
+    style="
+      background: url('./static/7/graphics/form-section-bg.jpg') no-repeat;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      height: 100vh;
+    "
+  >
+    <h1 class="mb-3 my-5 fw-bold display-2 pt-5" style="color: #e39696">
+      Contact us
+    </h1>
+    <div class="container-fluid pb-5">
+      <svg
+        style="width: 10%; height: 5%"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 82 12"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+              stroke: #e39696;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-8.2 -9.1)">
+          <path
+            class="a"
+            d="M49.2,15.1,14.929,20m0,0c-.3,0-.6.1-.8.1a5,5,0,1,1,4.925-5"
+            transform="translate(0 0)"
+          ></path>
+          <g transform="translate(49.2 10.1)">
+            <path
+              class="a"
+              d="M49,15.1l34.271-4.9m0,0c.3,0,.6-.1.8-.1a5,5,0,1,1-4.925,5"
+              transform="translate(-49 -10.1)"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <form style="width: 50%" class="mx-auto">
+      <!-- Name input -->
+      <div class="form-outline mb-4 mx-auto">
+        <input
+          type="text"
+          id="form4Example1"
+          class="form-control"
+          placeholder="Name"
+          style="border: 2px solid #333333"
+        />
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input
+          type="email"
+          id="form4Example2"
+          class="form-control"
+          placeholder="Email address"
+          style="border: 2px solid#333333"
+        />
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea
+          class="form-control"
+          id="form4Example3"
+          rows="4"
+          placeholder="Message"
+          style="border: 2px solid #333333"
+        ></textarea>
+      </div>
+
+      <!-- Submit button -->
+      <a
+        class="btn btn-outline-light bg-dark btn-lg btnheader px-4 py-2"
+        href="#!"
+        role="button"
+        style="color: #ffffff"
+        >Send me</a
+      >
+    </form>
+  </div>
+  {% endblock %} {%block footer %}
+  <footer class="container-fluid py-5 bg-dark text-white">
+    <p class="text-center my-auto">
+      &copy; Copyright 2021 Blossom Wedding. All Rights Reserved. Blossom
+      Wedding
+    </p>
+  </footer>
+</div>
+
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends "default_user.html" %} {%block title%} Invitation Websites {%
+endblock %} {%block content%}
+<div class="row">
+  <div class="col d-flex justify-content-start px-4 pt-4">
+    <h2><strong>View Designs</strong></h2>
+  </div>
+</div>
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for category, message in messages %}
+<div
+  class="alert alert-{{ category }} alert-dismissible fade show"
+  role="alert"
+>
+  <span>{{ message }}</span>
+</div>
+{% endfor %} {% endif %} {% endwith %}
+<div class="row-5 p-3">
+  <div class="col d-flex justify-content-center">
+    {% if session['template_id'] %} {% for template in templates %} {% if
+    template[0] == session['template_id'] %}
+
+    <div class="row">
+      <div class="col-md-6 mb-md-0">
+        <div id="mdb-lightbox-ui"></div>
+
+        <div class="mdb-lightbox">
+          <div class="row product-gallery">
+            <div class="col-12">
+              <figure class="view overlay rounded z-depth-1 main-img">
+                <img src="{{template[2]}}" class="img-fluid z-depth-1" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Selected Design</strong></p>
+        <h5>{{template[1]}}</h5>
+        <form action="/invitation_website" method="GET">
+          <input name="id" value="{{session['template_id']}}" hidden />
+          <button
+            class="text-primary border-0 btn p-0"
+            name="action"
+            value="form-edit"
+          >
+            <span class="mr-1"><strong>Edit your Website </strong></span>
+          </button>
+          <p class="pt-1">
+            <span>
+              <strong>Want to select a different design?</strong>
+              <br />
+              You can easily switch to a new one and we'll transfer all your
+              information over. Don't forget: all of our designs are free.
+              Enjoy!
+            </span>
+          </p>
+
+          <button
+            type="submit"
+            class="btn btn-primary btn-md mr-1 mb-2 px-5"
+            name="action"
+            value="previewWebsite"
+          >
+            Preview
+          </button>
+          <button
+            type="submit"
+            class="btn btn-danger btn-md mr-1 mb-2"
+            name="action"
+            value="form-remove"
+          >
+            Remove
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!--Section: Block Content-->
+    {% endif %} {% endfor %} {% else %} No Template Selected... {% endif %}
+  </div>
+</div>
+
+<div class="row mt-2 pb-5">
+  {% for template in templates %}
+  <form class="col" action="/invitation_website" method="GET">
+    <input name="id" value="{{template[0]}}" hidden />
+    <div class="card mx-auto my-auto mt-3 show-image" style="width: 20rem">
+      <div class="btn border-0 card-hover">
+        <img
+          class="card-img-top mt-4 mx-auto d-flex justify-content-center w-70"
+          src="{{template[2]}}"
+          alt="Template"
+        />
+        {% if template[0] == session['template_id'] %}
+        <button
+          class="btn btn-primary edit-button w-50"
+          name="action"
+          value="form-edit"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-danger preview-button w-50"
+          name="action"
+          value="previewWebsite"
+        >
+          Preview
+        </button>
+        {% else %}
+        <button
+          class="btn btn-primary edit-button w-50"
+          name="action"
+          value="form-select"
+        >
+          Select
+        </button>
+        <button
+          class="btn btn-danger preview-button w-50"
+          name="action"
+          value="openTemplate"
+        >
+          Preview
+        </button>
+        {% endif %}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center col-12 text-truncate title-card">
+          {{template[1]}}
+        </h5>
+        <div class="d-flex">
+          <p
+            class="card-text border rounded-circle"
+            style="width: 25px; height: 25px; background-color: WHITE"
+          ></p>
+          <p
+            class="card-text border rounded-circle"
+            style="
+              margin-left: 2%;
+              width: 25px;
+              height: 25px;
+              background-color: RED;
+            "
+          ></p>
+        </div>
+      </div>
+    </div>
+  </form>
+  {%endfor%}
+</div>
+
+{% endblock %}

@@ -1,0 +1,632 @@
+{% extends "default_user.html" %} {%block title%} Edit Pages {% endblock %}
+{%block content%}
+<div class="row">
+  <div class="col pt-2 pb-3">
+    <div class="sidenav p-2">
+      <span class="d-flex justify-content-center pb-5"
+        ><strong>Edit Pages</strong></span
+      >
+      <form action="/edit_template" method="POST">
+        <button
+          type="submit"
+          class="btn btn-primary btn-md mr-1 mb-2 px-5"
+          name="action"
+          value="previewTemplate"
+        >
+          Preview Website
+        </button>
+      </form>
+      <a class="d-flex justify-content-center mt-3" href="?page=0">Title</a>
+      <a class="d-flex justify-content-center" href="?page=1"
+        >Wedding Preparation</a
+      >
+      <a class="d-flex justify-content-center" href="?page=2">Our Love Story</a>
+      <a class="d-flex justify-content-center" href="?page=3">About Us</a>
+      <a class="d-flex justify-content-center" href="?page=4">Services</a>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="title_">
+    <div class="container w-100">
+      <form
+        action="/update_webInfo"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">Title</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="title" class="col col-form-label">Title</label>
+          <div class="col">
+            {% if websiteInfo.title[0] %}
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              value="{{websiteInfo.title[0][0]}}"
+              id="title"
+            />
+            {% else %}
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              value=""
+              id="title"
+            />
+            {%endif%}
+          </div>
+          <label for="Description" class="col col-form-label"
+            >Description</label
+          >
+          <div class="col">
+            <textarea
+              class="form-control"
+              type="text"
+              name="description"
+              id="Description"
+            >
+{% if websiteInfo.title[0] %}{{websiteInfo.title[0][1]}}
+{%endif%}</textarea
+            >
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="background_image" class="col col-form-label"
+              >Background Image</label
+            >
+            <div class="file-field">
+              <div class="z-depth-1-half mb-4">
+                {% if websiteInfo.title[0] %}
+                <img
+                  id="background_image"
+                  src="{{websiteInfo.title[0][2]}}"
+                  class="img-fluid"
+                  alt="background-image"
+                />
+                {% else %}
+                <img
+                  id="background_image"
+                  src=""
+                  class="img-fluid"
+                  alt="background-image"
+                />
+                {% endif %}
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="btn btn-mdb-color btn-rounded float-left">
+                  <span>Choose file</span>
+                  <input type="file" name="title_background" accept="image/*" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-2 mb-2 px-2">
+            <div class="col"></div>
+            <button
+              type="submit"
+              class="col-2 btn btn-lg text-white"
+              style="background-color: #d69847"
+              name="action"
+              value="update_title"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="preparation_">
+    <div class="container w-100">
+      <form
+        action="/update_webInfo"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">
+          Wedding Preparation
+        </h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="Preparation" class="col col-form-label">Name</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="Preparation"
+              value="{{websiteInfo.Preparation[0]}}"
+              id="Preparation"
+              required
+            />
+          </div>
+          <label for="Description" class="col col-form-label"
+            >Description</label
+          >
+          <div class="col">
+            <textarea
+              class="form-control"
+              type="text"
+              name="description"
+              value="{{websiteInfo.Preparation[1]}}"
+              id="Description"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="background_image" class="col col-form-label"
+            >Background Image</label
+          >
+          <div class="file-field">
+            <div class="z-depth-1-half mb-4">
+              <img
+                id="background_image"
+                src="{{websiteInfo.Preparation[2]}}"
+                class="img-fluid"
+                alt="background-image"
+                id="croppedImage"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="btn btn-mdb-color btn-rounded float-left">
+                <span>Choose file</span>
+                <input
+                  type="file"
+                  name="image"
+                  class="image"
+                  accept="image/*"
+                  id="file-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_preparation"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Crop image</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="img-container">
+              <div class="row">
+                <div class="col-md-8">
+                  <!--  default image where we will set the src via jquery-->
+                  <img id="image" style="display: block; width: 100%" />
+                </div>
+                <div class="col-md-4">
+                  <div
+                    class="preview"
+                    style="
+                      overflow: hidden;
+                      width: 160px;
+                      height: 160px;
+                      margin: 10px;
+                      border: 1px solid red;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              data-method="getCroppedCanvas"
+              data-option='{ "maxWidth": 4096, "maxHeight": 4096 }'
+            >
+              <span
+                class="docs-tooltip"
+                data-toggle="tooltip"
+                title="cropper.getCroppedCanvas({ maxWidth: 4096, maxHeight: 4096 })"
+              >
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="lovestory_">
+    <div class="container w-100">
+      <form
+        action="/update_webInfo"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">Love Story</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="title" class="col col-form-label">Title</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              value="{{websiteInfo.OurLoveStory[0]}}"
+              id="title"
+              required
+            />
+          </div>
+          <label for="Description" class="col col-form-label"
+            >Description</label
+          >
+          <div class="col">
+            <textarea
+              class="form-control"
+              type="text"
+              name="description"
+              value="{{websiteInfo.OurLoveStory[1]}}"
+              id="Description"
+              required
+            >
+            </textarea>
+          </div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="background_image" class="col col-form-label"
+            >Background Image</label
+          >
+          <div class="file-field">
+            <div class="z-depth-1-half mb-4">
+              <img
+                id="background_image"
+                src="{{websiteInfo.OurLoveStory[2]}}"
+                class="img-fluid"
+                alt="background-image"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="btn btn-mdb-color btn-rounded float-left">
+                <span>Choose file</span>
+                <input type="file" name="title_background" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_love"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="about_us_">
+    <div class="container w-100">
+      <form
+        action="/update_webInfo"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">About Us</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="title" class="col col-form-label">Title</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              value="{{websiteInfo.About[0]}}"
+              id="title"
+              required
+            />
+          </div>
+          <label for="Description" class="col col-form-label"
+            >Description</label
+          >
+          <div class="col">
+            <textarea
+              class="form-control"
+              type="text"
+              name="description"
+              value="{{websiteInfo.About[1]}}"
+              id="Description"
+              required
+            >
+            </textarea>
+          </div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="background_image" class="col col-form-label"
+            >Background Image</label
+          >
+          <div class="file-field">
+            <div class="z-depth-1-half mb-4">
+              <img
+                id="background_image"
+                src="{{websiteInfo.About[2]}}"
+                class="img-fluid"
+                alt="background-image"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="btn btn-mdb-color btn-rounded float-left">
+                <span>Choose file</span>
+                <input type="file" name="title_background" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_about"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-9 mx-auto my-auto" id="services_">
+    <div class="container w-100">
+      <form
+        action="/update_webInfo"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h2 class="pt-2 line mb-5" style="color: #f8b65f">Services</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div
+          class="alert alert-{{ category }} alert-dismissible fade show"
+          role="alert"
+        >
+          <span>{{ message }}</span>
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="form-group mb-2">
+          <label for="title" class="col col-form-label">Title</label>
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              value="{{websiteInfo.Services[0]}}"
+              id="title"
+              required
+            />
+          </div>
+          <label for="Description" class="col col-form-label"
+            >Description</label
+          >
+          <div class="col">
+            <textarea
+              class="form-control"
+              type="text"
+              name="description"
+              value="{{websiteInfo.Services[1]}}"
+              id="Description"
+              required
+            >
+            </textarea>
+          </div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="background_image" class="col col-form-label"
+            >Background Image</label
+          >
+          <div class="file-field">
+            <div class="z-depth-1-half mb-4">
+              <img
+                id="background_image"
+                src="{{websiteInfo.Services[2]}}"
+                class="img-fluid"
+                alt="background-image"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="btn btn-mdb-color btn-rounded float-left">
+                <span>Choose file</span>
+                <input type="file" name="title_background" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 mb-2 px-2">
+          <div class="col"></div>
+          <button
+            type="submit"
+            class="col-2 btn btn-lg text-white"
+            style="background-color: #d69847"
+            name="action"
+            value="update_services"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block scriptPage %}
+<script>
+  $(document).ready(function () {
+    const params = new URLSearchParams(window.location.search);
+    result = params.get("page");
+    GroupMethod(result);
+  });
+  function GroupMethod(x) {
+    if (x === "0") {
+      document.getElementById("title_").style.display = "block";
+      document.getElementById("preparation_").style.display = "none";
+      document.getElementById("lovestory_").style.display = "none";
+      document.getElementById("about_us_").style.display = "none";
+      document.getElementById("services_").style.display = "none";
+    } else if (x === "1") {
+      document.getElementById("title_").style.display = "none";
+      document.getElementById("preparation_").style.display = "block";
+      document.getElementById("lovestory_").style.display = "none";
+      document.getElementById("about_us_").style.display = "none";
+      document.getElementById("services_").style.display = "none";
+    } else if (x === "2") {
+      document.getElementById("title_").style.display = "none";
+      document.getElementById("preparation_").style.display = "none";
+      document.getElementById("lovestory_").style.display = "block";
+      document.getElementById("about_us_").style.display = "none";
+      document.getElementById("services_").style.display = "none";
+    } else if (x === "3") {
+      document.getElementById("title_").style.display = "none";
+      document.getElementById("preparation_").style.display = "none";
+      document.getElementById("lovestory_").style.display = "none";
+      document.getElementById("about_us_").style.display = "block";
+      document.getElementById("services_").style.display = "none";
+    } else if (x === "4") {
+      document.getElementById("title_").style.display = "none";
+      document.getElementById("preparation_").style.display = "none";
+      document.getElementById("lovestory_").style.display = "none";
+      document.getElementById("about_us_").style.display = "none";
+      document.getElementById("services_").style.display = "block";
+    } else {
+      document.getElementById("title_").style.display = "block";
+      document.getElementById("preparation_").style.display = "none";
+      document.getElementById("lovestory_").style.display = "none";
+      document.getElementById("about_us_").style.display = "none";
+      document.getElementById("services_").style.display = "none";
+    }
+    return;
+  }
+</script>
+
+<script>
+  var result;
+  var bs_modal = $("#modal");
+  var image = document.getElementById("image");
+  var cropper, reader, file;
+
+  $("#preparation_").on("change", ".image", function (e) {
+    var files = e.target.files;
+    var done = function (url) {
+      image.src = url;
+      bs_modal.modal("show");
+    };
+
+    if (files && files.length > 0) {
+      file = files[0];
+
+      if (URL) {
+        done(URL.createObjectURL(file));
+      } else if (FileReader) {
+        reader = new FileReader();
+        reader.onload = function (e) {
+          done(reader.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  });
+
+  bs_modal
+    .on("shown.bs.modal", function () {
+      cropper = new Cropper(image, {
+        aspectRatio: 1,
+        viewMode: 3,
+        preview: ".preview",
+      });
+    })
+    .on("hidden.bs.modal", function () {
+      cropper.destroy();
+      cropper = null;
+    });
+
+  $("#crop").click(function () {
+    canvas = cropper.getCroppedCanvas({
+      width: 320,
+      height: 160,
+    });
+  });
+  switch (data - method) {
+    case "getCroppedCanvas":
+      if (result) {
+        $("#file-image").value(result);
+      }
+  }
+</script>
+
+{% endblock %}

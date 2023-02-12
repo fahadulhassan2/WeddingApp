@@ -1,0 +1,1184 @@
+{% extends "default_user.html" %} {%block title%} Guests List {% endblock %}
+{%block content%}
+
+<div class="bg-white" style="border-top: 7px solid #cccccc">
+  <div class="row pt-4">
+    <h3 class="text-center pb-4"><strong>Guests List</strong></h3>
+  </div>
+  <div class="row">
+    <div class="col d-flex justify-content-end">
+      <button
+        class="border-0 bg-white"
+        data-toggle="modal"
+        data-target="#exampleModalCenter"
+      >
+        Add Guests
+      </button>
+
+      <button class="border-0 bg-white">Print</button>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="exampleModalCenter"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end border-0">
+          <button
+            type="button"
+            class="close border-0 bg-white"
+            style="color: #ceb08d"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true" style="font-size: 40px">&times;</span>
+          </button>
+        </div>
+        <h4 class="text-center"><strong>Add Guests</strong></h4>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn text-white w-100"
+                onclick="showTab('1')"
+              >
+                Single People
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn text-white w-100"
+                onclick="showTab('2')"
+              >
+                Couple
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn text-white w-100"
+                onclick="showTab('3')"
+              >
+                Family
+              </button>
+            </div>
+          </div>
+          <form action="/guestslist" method="POST">
+            <input id="opt" value="1" name="opt" hidden />
+            <div class="row mt-2">
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputTitle1">Title</label>
+                  <select
+                    class="form-select"
+                    id="inputTitle1"
+                    name="inputTitle1"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Select</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Miss.">Miss.</option>
+                    <option value="Mx.">Mx.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Judge">Judge</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputFirstName1">First Name</label>
+                  <input
+                    type="text"
+                    class="px-2"
+                    id="inputFirstName1"
+                    name="inputFirstName1"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputLastName1">Last Name</label>
+                  <input
+                    type="text"
+                    class="px-2"
+                    id="inputLastName1"
+                    name="inputLastName1"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- This is the first input which is compulsory in all tabs -->
+
+            <div id="tab2" style="display: none">
+              <div class="row mt-2">
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <select
+                      class="form-select"
+                      name="inputTitle2"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Mrs.">Mrs.</option>
+                      <option value="Ms.">Ms.</option>
+                      <option value="Miss.">Miss.</option>
+                      <option value="Mx.">Mx.</option>
+                      <option value="Dr.">Dr.</option>
+                      <option value="Judge">Judge</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <input
+                      type="text"
+                      class="px-2"
+                      id="inputFirstName2"
+                      name="inputFirstName2"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <input
+                      type="text"
+                      class="px-2"
+                      id="inputLastName2"
+                      name="inputLastName2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab3" style="display: none">
+              <div class="row mt-2">
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <select
+                      class="form-select"
+                      name="inputTitle3"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Select</option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Mrs.">Mrs.</option>
+                      <option value="Ms.">Ms.</option>
+                      <option value="Miss.">Miss.</option>
+                      <option value="Mx.">Mx.</option>
+                      <option value="Dr.">Dr.</option>
+                      <option value="Judge">Judge</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <input
+                      type="text"
+                      class="px-2"
+                      id="inputFirstName3"
+                      name="inputFirstName3"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <input
+                      type="text"
+                      class="px-2"
+                      id="inputLastName3"
+                      name="inputLastName3"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-sm-3">
+                <label>Invited?</label>
+              </div>
+              <div class="col-sm-7">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="invited"
+                  id="option1"
+                  value="Definetly"
+                />
+                <label class="form-check-label px-2" for="option1"
+                  >Definetly</label
+                >
+
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="invited"
+                  id="option2"
+                  value="Maybe"
+                />
+                <label class="form-check-label px-2" for="option2">Maybe</label>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputStreetAddress">Street Address</label>
+                  <input
+                    type="text"
+                    class="px-2 w-100"
+                    id="inputStreetAddress"
+                    name="inputStreetAddress"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputAptFloor">Apt/Floor</label>
+                  <input
+                    type="text"
+                    class="px-2 w-100"
+                    id="inputAptFloor"
+                    name="inputAptFloor"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputCity">City</label>
+                  <input
+                    type="text"
+                    class="px-2 w-100"
+                    id="inputCity"
+                    name="inputCity"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group label-floating">
+                      <label for="inputStateProvince">State/Province</label>
+                      <input
+                        type="text"
+                        class="px-2 w-100"
+                        id="inputStateProvince"
+                        name="inputStateProvince"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group label-floating">
+                      <label for="inputZipCode">Zip Code</label>
+                      <input
+                        type="text"
+                        class="px-2 w-100"
+                        id="inputZipCode"
+                        name="inputZipCode"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputCountry">Country</label>
+                  <input
+                    type="text"
+                    class="px-2 w-100"
+                    id="inputCountry"
+                    name="inputCountry"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputEmail">Email</label>
+                  <input
+                    type="email"
+                    class="px-2 w-100"
+                    id="inputEmail"
+                    name="inputEmail"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group label-floating">
+                  <label for="inputContactNumber">Mobile</label>
+                  <input
+                    type="text"
+                    class="px-2 w-100"
+                    id="inputContactNumber"
+                    name="inputContactNumber"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                name="action"
+                value="AddRow"
+                class="btn text-white"
+              >
+                Save & Add Another
+              </button>
+              <button type="button" class="btn bg-white" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade"
+    id="UpdateModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end border-0">
+          <button
+            type="button"
+            class="close border-0 bg-white"
+            style="color: #ceb08d"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true" style="font-size: 40px">&times;</span>
+          </button>
+        </div>
+        <h4 class="text-center"><strong>Edit Guests</strong></h4>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn text-white w-100"
+                onclick="showUpdateTab('1')"
+              >
+                Guests Info
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn text-white w-100"
+                onclick="showUpdateTab('2')"
+              >
+                Contact Info
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="button"
+                class="btn text-white w-100"
+                onclick="showUpdateTab('3')"
+              >
+                RSVP Status
+              </button>
+            </div>
+          </div>
+          <form action="/guestslist" method="POST">
+            <input id="option" value="1" name="option" hidden />
+            <div id="UpdateTab1">
+              <div class="updatetab">
+                <div class="row mt-2">
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <label for="inputTitle1">Title</label>
+                      <select
+                        class="form-select"
+                        id="Title1"
+                        name="inputTitle1"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Miss.">Miss.</option>
+                        <option value="Mx.">Mx.</option>
+                        <option value="Dr.">Dr.</option>
+                        <option value="Judge">Judge</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <label for="inputFirstName1">First Name</label>
+                      <input
+                        type="text"
+                        class="px-2"
+                        id="FirstName1"
+                        name="inputFirstName1"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <label for="inputLastName1">Last Name</label>
+                      <input
+                        type="text"
+                        class="px-2"
+                        id="LastName1"
+                        name="inputLastName1"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- This is the first input which is compulsory in all tabs -->
+
+              <div class="updatetab" style="display: none">
+                <div class="row mt-2">
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <select
+                        class="form-select"
+                        name="inputTitle2"
+                        id="Title2"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Miss.">Miss.</option>
+                        <option value="Mx.">Mx.</option>
+                        <option value="Dr.">Dr.</option>
+                        <option value="Judge">Judge</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <input
+                        type="text"
+                        class="px-2"
+                        id="FirstName2"
+                        name="inputFirstName2"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <input
+                        type="text"
+                        class="px-2"
+                        id="LastName2"
+                        name="inputLastName2"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="updatetab" style="display: none">
+                <div class="row mt-2">
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <select
+                        class="form-select"
+                        name="inputTitle3"
+                        id="Title3"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Select</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Miss.">Miss.</option>
+                        <option value="Mx.">Mx.</option>
+                        <option value="Dr.">Dr.</option>
+                        <option value="Judge">Judge</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <input
+                        type="text"
+                        class="px-2"
+                        id="FirstName3"
+                        name="inputFirstName3"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <input
+                        type="text"
+                        class="px-2"
+                        id="LastName3"
+                        name="inputLastName3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col-sm-3">
+                  <label>Invited?</label>
+                </div>
+                <div class="col-sm-7">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="invited"
+                    id="updateOption1"
+                    value="Definetly"
+                  />
+                  <label class="form-check-label px-2" for="updateOption1"
+                    >Definetly</label
+                  >
+
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="invited"
+                    id="updateOption2"
+                    value="Maybe"
+                  />
+                  <label class="form-check-label px-2" for="updateOption2"
+                    >Maybe</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div id="UpdateTab2" style="display: none">
+              <div class="row mt-2">
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <label for="inputStreetAddress">Street Address</label>
+                    <input
+                      type="text"
+                      class="px-2 w-100"
+                      id="StreetAddress"
+                      name="inputStreetAddress"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <label for="inputAptFloor">Apt/Floor</label>
+                    <input
+                      type="text"
+                      class="px-2 w-100"
+                      id="AptFloor"
+                      name="inputAptFloor"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <label for="inputCity">City</label>
+                    <input
+                      type="text"
+                      class="px-2 w-100"
+                      id="City"
+                      name="inputCity"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group label-floating">
+                        <label for="inputStateProvince">State/Province</label>
+                        <input
+                          type="text"
+                          class="px-2 w-100"
+                          id="StateProvince"
+                          name="inputStateProvince"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group label-floating">
+                        <label for="inputZipCode">Zip Code</label>
+                        <input
+                          type="text"
+                          class="px-2 w-100"
+                          id="ZipCode"
+                          name="inputZipCode"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <label for="inputCountry">Country</label>
+                    <input
+                      type="text"
+                      class="px-2 w-100"
+                      id="Country"
+                      name="inputCountry"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-2">
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <label for="inputEmail">Email</label>
+                    <input
+                      type="email"
+                      class="px-2 w-100"
+                      id="Email"
+                      name="inputEmail"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group label-floating">
+                    <label for="inputContactNumber">Mobile</label>
+                    <input
+                      type="text"
+                      class="px-2 w-100"
+                      id="ContactNumber"
+                      name="inputContactNumber"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="UpdateTab3" style="display: none">
+              <div class="updateRSVP">
+                <div class="row mt-2 p-5">
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <label id="Member1"></label>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <select
+                        class="form-select"
+                        id="Member1Status"
+                        name="member1Status"
+                        aria-label="Default select example"
+                      >
+                        <option value="Attending">Attending</option>
+                        <option value="Not Attending">Not Attending</option>
+                        <option value="Maybe">Maybe</option>
+                        <option value="Not Replied">Not Replied</option>
+                        <option value="Not Invited">Not Invited</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- This is the first input which is compulsory in all tabs -->
+
+              <div class="updateRSVP">
+                <div class="row mt-2 p-5 pt-2 pb-0">
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <label id="Member2"></label>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <select
+                        class="form-select"
+                        id="Member2Status"
+                        name="member2Status"
+                        aria-label="Default select example"
+                      >
+                        <option value="Attending">Attending</option>
+                        <option value="Not Attending">Not Attending</option>
+                        <option value="Maybe">Maybe</option>
+                        <option value="Not Replied">Not Replied</option>
+                        <option value="Not Invited">Not Invited</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="updateRSVP">
+                <div class="row mt-2 p-5">
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <label id="Member3"></label>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="form-group label-floating">
+                      <select
+                        class="form-select"
+                        id="Member3Status"
+                        name="member3Status"
+                        aria-label="Default select example"
+                      >
+                        <option value="Attending">Attending</option>
+                        <option value="Not Attending">Not Attending</option>
+                        <option value="Maybe">Maybe</option>
+                        <option value="Not Replied">Not Replied</option>
+                        <option value="Not Invited">Not Invited</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                name="action"
+                value="AddRow"
+                class="btn text-white"
+              >
+                Save
+              </button>
+              <button type="button" class="btn bg-white" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5" style="border-bottom: 1px solid #cccccc"></div>
+  <div
+    class="row content-center"
+    style="border: 1px solid #cccccc; border-top: 0px"
+  >
+    <div class="col-3">
+      <div class="row justify-content-center py-2">
+        <div class="col-2 text-end" style="font-size: 30px">{{status[1]}}</div>
+        <div class="col-6 py-2">
+          <h4>Attending</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center pb-2">
+        <div class="col-2 text-end" style="font-size: 30px">{{status[2]}}</div>
+        <div class="col-6 py-2">
+          <h4>Not Attending</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center pb-2">
+        <div class="col-2 text-end" style="font-size: 30px">{{status[3]}}</div>
+        <div class="col-6 py-2">
+          <h4>Maybe</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center pb-2">
+        <div class="col-2 text-end" style="font-size: 30px">{{status[0]}}</div>
+        <div class="col-6 py-2">
+          <h4>Not Replied</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center pb-2">
+        <div class="col-2 text-end" style="font-size: 30px">{{status[5]}}</div>
+        <div class="col-6 py-2">
+          <h4>Not Invited</h4>
+        </div>
+      </div>
+      <div class="row justify-content-center py-2 border">
+        <div class="col-4 py-2 text-end">
+          <h4>Total Invited</h4>
+        </div>
+        <div class="col-4 text-start" style="font-size: 30px">
+          {{status[4]}}
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="col-9"
+      style="border: 1px solid #cccccc; border-top: 0px; border-bottom: 0px"
+    >
+      <div class="table-responsive">
+        <table class="table table-bordered w-200">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">
+                <h4>Select</h4>
+              </th>
+              <th scope="col">
+                <h4>Status</h4>
+              </th>
+              <th scope="col">
+                <h4>Email & Mobile</h4>
+              </th>
+              <th scope="col">
+                <h4>Name</h4>
+              </th>
+              <th scope="col">
+                <h4>Total</h4>
+              </th>
+              <th scope="col">
+                <h4>Invited?</h4>
+              </th>
+
+              <th scope="col">
+                <h4>Cancel</h4>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            {% for Guest in Guests %}
+
+            <tr>
+              <td scope="row">
+                <input
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                  name="{{Guest[0]}}"
+                />
+              </td>
+
+              <td
+                class="UpdateClass"
+                scope="row"
+                data-guestID="{{Guest[0]}}"
+                data-guestNames="{{Guest[1]}}"
+                data-streetAddress="{{Guest[2]}}"
+                data-AptFloor="{{Guest[3]}}"
+                data-City="{{Guest[4]}}"
+                data-Country="{{Guest[5]}}"
+                data-StateProvince="{{Guest[6]}}"
+                data-ZipCode="{{Guest[7]}}"
+                data-Invited="{{Guest[8]}}"
+                data-email="{{Guest[9]}}"
+                data-phone="{{Guest[10]}}"
+                data-status="{{Guest[11]}}"
+                data-Reply="{{Guest[12]}}"
+                data-Total="{{Guest[13]}}"
+              >
+                <label>{{Guest[11]}}</label>
+              </td>
+              <td
+                class="UpdateClass"
+                scope="row"
+                data-guestID="{{Guest[0]}}"
+                data-guestNames="{{Guest[1]}}"
+                data-streetAddress="{{Guest[2]}}"
+                data-AptFloor="{{Guest[3]}}"
+                data-City="{{Guest[4]}}"
+                data-Country="{{Guest[5]}}"
+                data-StateProvince="{{Guest[6]}}"
+                data-ZipCode="{{Guest[7]}}"
+                data-Invited="{{Guest[8]}}"
+                data-email="{{Guest[9]}}"
+                data-phone="{{Guest[10]}}"
+                data-status="{{Guest[11]}}"
+                data-Reply="{{Guest[12]}}"
+                data-Total="{{Guest[13]}}"
+              >
+                <div><label>{{Guest[9]}}</label></div>
+                <div><label>{{Guest[10]}}</label></div>
+              </td>
+              <td
+                class="UpdateClass"
+                scope="row"
+                data-guestID="{{Guest[0]}}"
+                data-guestNames="{{Guest[1]}}"
+                data-streetAddress="{{Guest[2]}}"
+                data-AptFloor="{{Guest[3]}}"
+                data-City="{{Guest[4]}}"
+                data-Country="{{Guest[5]}}"
+                data-StateProvince="{{Guest[6]}}"
+                data-ZipCode="{{Guest[7]}}"
+                data-Invited="{{Guest[8]}}"
+                data-email="{{Guest[9]}}"
+                data-phone="{{Guest[10]}}"
+                data-status="{{Guest[11]}}"
+                data-Reply="{{Guest[12]}}"
+                data-Total="{{Guest[13]}}"
+              >
+                <label>{{Guest[1]}}</label>
+              </td>
+              <td
+                class="UpdateClass"
+                scope="row"
+                data-guestID="{{Guest[0]}}"
+                data-guestNames="{{Guest[1]}}"
+                data-streetAddress="{{Guest[2]}}"
+                data-AptFloor="{{Guest[3]}}"
+                data-City="{{Guest[4]}}"
+                data-Country="{{Guest[5]}}"
+                data-StateProvince="{{Guest[6]}}"
+                data-ZipCode="{{Guest[7]}}"
+                data-Invited="{{Guest[8]}}"
+                data-email="{{Guest[9]}}"
+                data-phone="{{Guest[10]}}"
+                data-status="{{Guest[11]}}"
+                data-Reply="{{Guest[12]}}"
+                data-Total="{{Guest[13]}}"
+              >
+                <label>{{Guest[13]}}</label>
+              </td>
+              <td
+                class="UpdateClass"
+                scope="row"
+                data-guestID="{{Guest[0]}}"
+                data-guestNames="{{Guest[1]}}"
+                data-streetAddress="{{Guest[2]}}"
+                data-AptFloor="{{Guest[3]}}"
+                data-City="{{Guest[4]}}"
+                data-Country="{{Guest[5]}}"
+                data-StateProvince="{{Guest[6]}}"
+                data-ZipCode="{{Guest[7]}}"
+                data-Invited="{{Guest[8]}}"
+                data-email="{{Guest[9]}}"
+                data-phone="{{Guest[10]}}"
+                data-status="{{Guest[11]}}"
+                data-Reply="{{Guest[12]}}"
+                data-Total="{{Guest[13]}}"
+              >
+                <label> {{Guest[8]}} </label>
+              </td>
+              <td scope="row">
+                <form action="/guestslist" method="POST">
+                  <input name="DeleteID" value="{{Guest[0]}}" hidden />
+                  <input name="guestNames" value="{{Guest[1]}}" hidden />
+                  <button
+                    class="bg-white border-0"
+                    type="submit"
+                    name="action"
+                    value="DeleteRow"
+                  >
+                    <img
+                      src="static/images/delete-icon.png"
+                      style="width: 30px"
+                      alt=""
+                    />
+                  </button>
+                </form>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block scriptPage %}
+
+<script>
+  var classname = document.getElementsByClassName("UpdateClass");
+  Array.from(classname).forEach(function (element) {
+    element.addEventListener("click", function () {
+      const section = element;
+      const guestID = section.getAttribute("data-guestID");
+      const guestNames = section.getAttribute("data-guestNames");
+      const streetAddress = section.getAttribute("data-streetAddress");
+      const AptFloor = section.getAttribute("data-AptFloor");
+      const City = section.getAttribute("data-City");
+      const Country = section.getAttribute("data-Country");
+      const StateProvince = section.getAttribute("data-StateProvince");
+      const ZipCode = section.getAttribute("data-ZipCode");
+      const Invited = section.getAttribute("data-Invited");
+      const email = section.getAttribute("data-email");
+      const phone = section.getAttribute("data-phone");
+      const status = section.getAttribute("data-status");
+      const Reply = section.getAttribute("data-Reply");
+      const Total = section.getAttribute("data-Total");
+      console.log(Total);
+
+      var modal = $("#UpdateModal");
+
+      // RSVP Below
+
+      const rsvpnames = guestNames.split(",");
+      let y = 1;
+      rsvpnames.forEach(function (name) {
+        document.getElementById("Member" + y).innerHTML = name;
+        y++;
+      });
+
+      let temp2 = 0;
+      const updateRSVP = document.getElementsByClassName("updateRSVP");
+      Array.from(updateRSVP).forEach(function (element) {
+        if (temp2 < Total) {
+          element.style.display = "block";
+          temp2++;
+        } else {
+          element.style.display = "none";
+        }
+      });
+
+      // Address and City Country below
+
+      document.getElementById("StreetAddress").value = streetAddress;
+      document.getElementById("AptFloor").value = AptFloor;
+      document.getElementById("City").value = City;
+      document.getElementById("Country").value = Country;
+      document.getElementById("StateProvince").value = StateProvince;
+      document.getElementById("ZipCode").value = ZipCode;
+      document.getElementById("Email").value = email;
+
+      document.getElementById("ContactNumber").value = phone;
+
+      // Invited Status below
+
+      if (Invited == "Definetly") {
+        document.getElementById("updateOption1").checked = true;
+      } else {
+        document.getElementById("updateOption2").checked = true;
+      }
+
+      // Guest Names below
+      const names = guestNames.split(",");
+      let x = 1;
+      names.forEach(function (name) {
+        let nameDetails = name.split(" ");
+        document.getElementById("Title" + x).value = nameDetails[0];
+        document.getElementById("FirstName" + x).value = nameDetails[1];
+        document.getElementById("LastName" + x).value = nameDetails[2];
+        x++;
+      });
+      console.log(names);
+      const updatetab = document.getElementsByClassName("updatetab");
+      let temp = 0;
+
+      // Input Fields belove
+      Array.from(updatetab).forEach(function (element) {
+        if (temp < Total) {
+          element.style.display = "block";
+          temp++;
+        } else {
+          element.style.display = "none";
+        }
+      });
+      $("#UpdateModal").modal("show");
+
+      // modal.find(".modal-title").text("New message to " + guestID);
+    });
+  });
+
+  document.getElementById("tab1").style.display = "block";
+  hideInput2();
+  hideInput3();
+  document.getElementById("tab2").style.display = "none";
+  document.getElementById("tab3").style.display = "none";
+
+  document.getElementById("UpdateTab1").style.display = "block";
+
+  document.getElementById("UpdateTab2").style.display = "none";
+  document.getElementById("UpdateTab3").style.display = "none";
+
+  function showInput2() {
+    document.getElementsByName("inputFirstName2").required = true;
+    document.getElementsByName("inputLastName2").required = true;
+    document.getElementsByName("inputTitle2").required = true;
+  }
+  function hideInput2() {
+    document.getElementsByName("inputFirstName2").required = false;
+    document.getElementsByName("inputLastName2").required = false;
+    document.getElementsByName("inputTitle2").required = false;
+  }
+  function showInput3() {
+    document.getElementsByName("inputFirstName3").required = true;
+    document.getElementsByName("inputLastName3").required = true;
+    document.getElementsByName("inputTitle3").required = true;
+  }
+  function hideInput3() {
+    document.getElementsByName("inputFirstName3").required = false;
+    document.getElementsByName("inputLastName3").required = false;
+    document.getElementsByName("inputTitle3").required = false;
+  }
+
+  function showTab(option) {
+    if (option === "1") {
+      document.getElementById("opt").value = "1";
+      hideInput2();
+      hideInput3();
+      document.getElementById("tab2").style.display = "none";
+      document.getElementById("tab3").style.display = "none";
+    } else if (option === "2") {
+      document.getElementById("opt").value = "2";
+
+      showInput2();
+      hideInput3();
+      document.getElementById("tab2").style.display = "block";
+      document.getElementById("tab3").style.display = "none";
+    } else {
+      document.getElementById("opt").value = "3";
+      showInput2();
+      showInput3();
+      document.getElementById("tab2").style.display = "block";
+      document.getElementById("tab3").style.display = "block";
+    }
+  }
+
+  function showUpdateTab(option) {
+    if (option === "1") {
+      document.getElementById("opt").value = "1";
+      //hideInput2();
+      //hideInput3();
+      document.getElementById("UpdateTab1").style.display = "block";
+
+      document.getElementById("UpdateTab2").style.display = "none";
+      document.getElementById("UpdateTab3").style.display = "none";
+    } else if (option === "2") {
+      document.getElementById("opt").value = "2";
+
+      // showInput2();
+      //hideInput3();
+      document.getElementById("UpdateTab2").style.display = "block";
+      document.getElementById("UpdateTab1").style.display = "none";
+      document.getElementById("UpdateTab3").style.display = "none";
+    } else {
+      document.getElementById("opt").value = "3";
+      // showInput2();
+      // showInput3();
+      document.getElementById("UpdateTab1").style.display = "none";
+      document.getElementById("UpdateTab2").style.display = "none";
+      document.getElementById("UpdateTab3").style.display = "block";
+    }
+  }
+</script>
+
+{% endblock %}

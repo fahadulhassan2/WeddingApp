@@ -1,0 +1,49 @@
+{% extends "default_auth.html" %} {%block Title%}Login {%endblock%}{%block
+content%}
+<div class="container auth">
+  <div class="auth-title text-center">LOGIN</div>
+  <form method="POST" action="/login">
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+    <div
+      class="alert alert-{{ category }} alert-dismissible fade show"
+      role="alert"
+    >
+      <span>{{ message }}</span>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+    <div>
+      <label class="auth-input-label" for="username">Username</label>
+    </div>
+    <div>
+      <input
+        class="auth-input py-0 w-100"
+        type="text"
+        name="username"
+        id="username"
+      />
+    </div>
+    <div>
+      <label class="auth-input-label pb-0" for="password">Password</label>
+    </div>
+    <div>
+      <input class="auth-input mb-5 w-100" type="password" name="password" />
+    </div>
+
+    <div class="p-t-30">
+      <button
+        id="loginBtn"
+        class="auth-login-button"
+        style="width: 100%"
+        type="submit"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+<div class="auth-label-guide d-flex justify-content-center mt-3">
+  <p>Don't have an account?</p>
+  <a class="auth-label-signup" href="/registration"> Sign Up Now</a>
+</div>
+{%endblock%}

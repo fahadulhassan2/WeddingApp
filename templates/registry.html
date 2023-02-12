@@ -1,0 +1,99 @@
+{% extends "default_user.html" %} {%block title%} Registry {% endblock %}
+{%block content%}
+<div class="mb-5">
+  <div class="row pt-4">
+    <h3 class="text-center pb-4">
+      <strong>This is all gifts you added <br />to your wish list</strong>
+    </h3>
+  </div>
+
+  <div class="row px-5" style="padding-right: 0px !important">
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %}
+    <div
+      class="alert alert-{{ category }} alert-dismissible fade show"
+      role="alert"
+    >
+      <span>{{ message }}</span>
+    </div>
+    {% endfor %} {% endif %} {% endwith %} {% for registry in RegistryData %} {%
+    if registry[2] == 'Cash'%}
+    <div class="col d-flex justify-content-start">
+      <div
+        class="card mx-auto mt-3 mb-3"
+        style="width: 15rem; border: 1px solid #d6d6d6"
+      >
+        <img
+          class="card-img-top mx-auto"
+          src="{{registry[3]}}"
+          alt="Card image cap"
+        />
+
+        <div class="card-body">
+          <h5 class="card-title text-center col-12 text-truncate">
+            {{registry[2]}}
+          </h5>
+          <p class="card-text text-center">{{registry[6]}}</p>
+          <form action="/registry" method="POST">
+            <input name="id" type="text" value="{{registry[1]}}" hidden />
+            <button
+              name="action"
+              value="removeCart"
+              class="btn text-white"
+              style="background-color: #e6d7c6; border: 1px solid #eee3d8"
+              style="width: 100%"
+            >
+              Remove
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="col d-flex justify-content-start">
+      <div class="p-1" style="padding-right: 0px">
+        <div
+          class="card mt-3 mb-3"
+          style="width: 15rem; border: 1px solid #d6d6d6"
+        >
+          <a
+            class="d-flex justify-content-center"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="{{registry[5]}}"
+          >
+            <img
+              class="card-img-top w-50"
+              src="{{registry[3]}}"
+              alt="Card image cap"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title text-center col-12 text-truncate">
+              {{registry[2]}}
+            </h5>
+            <p class="card-text text-center">{{registry[4]}}</p>
+            <p class="card-text text-center">{{registry[6]}}</p>
+            <form action="/registry" method="POST">
+              <input name="id" type="text" value="{{registry[1]}}" hidden />
+              <button
+                name="action"
+                value="removeCart"
+                class="btn text-white"
+                style="
+                  width: 100%;
+                  background-color: #e6d7c6;
+                  border: 1px solid #eee3d8;
+                "
+              >
+                Remove
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %} {%endfor%}
+  </div>
+</div>
+{% endblock %}

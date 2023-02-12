@@ -1,0 +1,408 @@
+{% extends "invitation_template.html" %} {% block links %}
+<!-- Bootstrap CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+  crossorigin="anonymous"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="./static/1/style.css" />
+
+{% endblock %} {% block content %}
+<div class="container-fluid-fluid">
+  <header>
+    <!-- Background image -->
+    {% if websiteInfo.title[0] %}
+    <div
+      class="text-center bg-image container-fluid"
+      style="
+        background: url('{{websiteInfo.title[0][2]}}')
+          no-repeat fixed;
+        background-size: center center;
+        background-position: top;
+        height: 100vh;
+      "
+    >
+    {% else %}
+    <div
+      class="text-center bg-image container-fluid"
+      style="
+        background: url('')
+          no-repeat fixed;
+        background-size: center center;
+        background-position: top;
+        height: 100vh;
+      "
+    >
+    {% endif %}
+      <div
+        class="d-flex justify-content-center align-items-center h-100 header"
+      >
+        <div class="text-white">
+          <p class="mb-3 display-8 text-uppercase" style="color: #5d294f">
+            {% if websiteInfo.title[0] %}
+            {{websiteInfo.title[0][1]}}
+            {% endif %}
+          </p>
+          <img
+            class="mb-3"
+            src="./static/1/grapics/picture3_she_said_yes_delimitator.png"
+            alt=""
+          />
+          <h1 class="mb-3 display-2" style="color: #5d294f">
+            {% if websiteInfo.title[0] %}{{websiteInfo.title[0][0]}}{% endif %}
+          </h1>
+          <a
+            class="btn btn-outline-light btn-lg btnheader px-4"
+            href="#!"
+            role="button"
+            style="color: #5d294f; border: 2px solid #5d294f"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+
+  <!-- Prepration  -->
+
+  <div class="container-fluid text-center">
+    <div id="preparation">
+      <h1 class="mb-3 my-5 display-5" style="color: #5d294f">
+        Our wedding prepration
+      </h1>
+      <img
+        class="mb-5"
+        src="./static/1/grapics/picture3_she_said_yes_delimitator.png"
+        alt="Not Fonud she said yes delimitator"
+      />
+      <p class="mb-3 display-8" style="color: #a08b99">
+        Excepteur sint occaecat cupidatat non qui proident, sunt culpa qui
+        officia
+        <br />deserunmollit anim id est laborum.
+      </p>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container prepration">
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-12">
+          <a href="#" class="d-block mb-4 h-100">
+            <img
+              class="img-container-fluid img-thumbnail"
+              src="./static/1/grapics/ess1_picture1_shesaidyes.jpg"
+              alt=""
+              style="border: 5px solid #5d294f"
+            />
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <a href="#" class="d-block mb-4 h-100">
+            <img
+              class="img-container-fluid img-thumbnail"
+              src="./static/1/grapics/ess1_picture2_shesaidyes.jpg"
+              alt=""
+              style="border: 5px solid #5d294f"
+            />
+          </a>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12">
+          <a href="#" class="d-block mb-4 h-100">
+            <img
+              class="img-container-fluid img-thumbnail"
+              src="./static/1/grapics/ess1_picture3_shesaidyes.jpg"
+              alt=""
+              style="border: 5px solid #5d294f"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Story -->
+
+    <div class="container-fluid" style="background: #f2e5d2" id="ourLove">
+      <div class="mx-5">
+        <div>
+          <h1 class="mb-3 pt-3 display-5 text-center" style="color: #5d294f">
+            Read About Our Love Story
+          </h1>
+          <img
+            class="mb-5 mx-auto"
+            src="./static/1/grapics/picture3_she_said_yes_delimitator.png"
+            alt="Not Fonud she said yes delimitator"
+          />
+          <p class="mb-3 display-8" style="color: #a08b99">
+            Excepteur sint occaecat cupidatat non qui proident, sunt culpa qui
+            officia
+            <br />deserunmollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="container row mx-auto py-5 d-flex justify-content-center align-items-center"
+      >
+        <div class="card col-lg-3 col-md-6 col-12 gx-0 m-2">
+          <img
+            src="./static/1/grapics/blog-post-370x410.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #5d294f" id="about">
+              How We Met
+            </h5>
+            <p class="card-text display-12 text-start" style="color: #5d294f">
+              No matter how many weddings you’ve attended there are some things
+              you just don’t find out about until your day.
+            </p>
+            <hr />
+            <p style="color: #5d294f">
+              Post by: admin <br />
+              <br />
+              Oct 23, 2017
+            </p>
+          </div>
+        </div>
+        <div class="card col-lg-3 col-md-6 col-12 gx-0 m-2">
+          <img
+            src="./static/1/grapics/blog-post2-370x410.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #5d294f">The Engagement</h5>
+            <p class="card-text display-12 text-start" style="color: #5d294f">
+              No matter how many weddings you’ve attended there are some things
+              you just don’t find out about until your day.
+            </p>
+            <hr />
+            <p style="color: #5d294f">
+              Post by: admin <br />
+              <br />
+              Oct 23, 2017
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-lg-3 col-md-6 col-12 gx-0 m-2">
+          <img
+            src="./static/1/grapics/blog-post1-370x410.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title" style="color: #5d294f">
+              Wedding Preparations
+            </h5>
+            <p class="card-text font text-start" style="color: #5d294f">
+              No matter how many weddings you’ve attended there are some things
+              you just don’t find out about until your day.
+            </p>
+            <hr />
+            <p style="color: #5d294f">
+              Post by: admin <br />
+              <br />
+              Oct 23, 2017
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- services -->
+
+    <section class="section services-section" id="services">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h2 class="text-center">Services</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- feaure box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fa fa-desktop"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Unique design</h5>
+                <p>
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+          <!-- feaure box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Different Layout</h5>
+                <p>
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+          <!-- feaure box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fa fa-comment"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Make it Simple</h5>
+                <p>
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+          <!-- feaure box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fa fa-image"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Responsiveness</h5>
+                <p>
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+          <!-- feaure box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fa fa-th"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Testing for Perfection</h5>
+                <p>
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+          <!-- feaure box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fa fa-cog"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Advanced Options</h5>
+                <p>
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- / -->
+        </div>
+      </div>
+    </section>
+
+    <!-- /.container-fluid -->
+
+    <div class="container-fluid text-center" id="contact">
+      <div>
+        <h1 class="mb-3 my-5 display-5" style="color: #5d294f">Contact Us</h1>
+        <p class="mb-3 display-8" style="color: #a08b99">
+          Excepteur sint occaecat cupidatat non qui proident, sunt culpaqui
+          officia
+          <br />deserunmollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+    <!-- contact us -->
+    <div class="container-fluid" style="width: 50%">
+      <form style="outline: none">
+        <!-- Name input -->
+        <div class="form-outline mb-4 mx-auto">
+          <input
+            type="text"
+            id="form4Example1"
+            class="form-control"
+            placeholder="Name"
+            style="border: 2px solid #5d294f"
+          />
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input
+            type="email"
+            id="form4Example2"
+            class="form-control"
+            placeholder="Email address"
+            style="border: 2px solid #5d294f"
+          />
+        </div>
+
+        <!-- Message input -->
+        <div class="mb-4">
+          <textarea
+            class="form-control"
+            id="form4Example3"
+            rows="4"
+            placeholder="Message"
+            style="border: 2px solid #5d294f; resize: none"
+          ></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <a
+          class="btn btn-outline-light btn-lg btnheader px-4 py-1"
+          href="#!"
+          role="button"
+          style="color: #5d294f; border: 2px solid #5d294f"
+          >Send me</a
+        >
+      </form>
+    </div>
+    {% endblock %} {%block footer %}
+    <!-- footer -->
+    <footer>
+      <p
+        class="text-center mt-4"
+        style="background-color: #5d294f; color: #ffff; padding: 30px"
+      >
+        Copyright by ModelTheme &copy; All Rights Reserved.
+      </p>
+    </footer>
+  </div>
+  {% endblock %}
+</div>

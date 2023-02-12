@@ -1,0 +1,227 @@
+{% extends "default_user.html" %} {%block title%} Gifts {% endblock %} {%block
+content%}
+<div class="mb-3">
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div
+    class="alert alert-{{ category }} alert-dismissible fade show"
+    role="alert"
+  >
+    <span>{{ message }}</span>
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+
+  <!-- Button trigger modal -->
+  <div class="container pt-5 pb-5">
+    <div class="card-body mx-auto w-50 border">
+      <h5 class="card-title text-center">Add Gifts</h5>
+
+      <p class="card-text text-center">From Other Websites</p>
+      <div class="d-flex justify-content-center">
+        <button
+          data-toggle="modal"
+          data-target="#exampleModal"
+          class="btn"
+          style="width: 50%; background-color: #f8c2ae; color: #ffffff"
+        >
+          <strong>ADD</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Gift Details</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/add-cart" method="POST">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="giftUrl">Gift URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="giftUrl"
+                name="giftUrl"
+                aria-describedby="urlHelp"
+                placeholder="URL"
+                required
+              />
+              <small id="urlHelp" class="form-text text-muted"
+                >Copy the Gift URL from website</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="giftName">Gift Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="giftName"
+                name="giftName"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageURL">Gift Image URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="imageURL"
+                name="imageURL"
+                placeholder="Image URL"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="priceGift">Gift Price</label>
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                id="priceGift"
+                name="priceGift"
+                placeholder="Price"
+                required
+              />
+              <input hidden name="id" value="" />
+            </div>
+            <div class="form-group">
+              <label for="giftCategory">Gift Category</label>
+              <select class="form-control" name="giftCategory" required>
+                <option>Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              name="action"
+              value="addGiftToList"
+              type="submit"
+              class="btn"
+              style="background-color: #f8c2ae; color: #ffffff"
+            >
+              ADD
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <form class="pt-3" action="/gifts" method="GET">
+    <div class="input-group d-flex justify-content-center">
+      <div class="form-group border" style="border-color: #f8c2ae !important">
+        <select class="form-control border-0" name="product_type">
+          <option>All</option>
+          <option>Home</option>
+          <option>Furniture</option>
+          <option>Bed & Bath</option>
+          <option>Kitchen</option>
+          <option>Tabletop</option>
+          <option>Electronic</option>
+          <option>Gift Cards</option>
+          <option>Cash Funds</option>
+        </select>
+      </div>
+
+      <button
+        id="search-button"
+        type="submit"
+        class="btn border-0 navigation-color"
+        style="background-color: #f8c2ae"
+      >
+        <strong>Search</strong>
+      </button>
+    </div>
+  </form>
+
+  <div class="row">
+    {% for gift in gifts %} {% if gift[1] == 'Cash'%}
+    <div class="card mx-auto mt-3 mb-3" style="width: 15rem">
+      <a target="_blank" rel="noopener noreferrer" href="#">
+        <img
+          class="card-img-top mx-auto"
+          src="{{gift[0]}}"
+          alt="Card image cap"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title text-center col-12 text-truncate">{{gift[1]}}</h5>
+
+        <p class="card-text text-center">{{gift[5]}}</p>
+        <form action="/add-cart" method="GET">
+          <input name="id" type="text" value="{{gift[4]}}" hidden />
+          <button
+            name="action"
+            value="addCart"
+            class="btn btn-primary"
+            style="width: 100%"
+          >
+            ADD
+          </button>
+        </form>
+      </div>
+    </div>
+
+    {% else %}
+    <div class="card mx-auto mt-3 mb-3" style="width: 15rem">
+      <a target="_blank" rel="noopener noreferrer" href="{{gift[3]}}">
+        <img
+          class="card-img-top mx-auto"
+          src="{{gift[0]}}"
+          alt="Card image cap"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title text-center col-12 text-truncate">{{gift[1]}}</h5>
+        <p class="card-text text-center">{{gift[2]}}</p>
+        <p class="card-text text-center">{{gift[5]}}</p>
+        <form action="/add-cart" method="GET">
+          <input name="id" type="text" value="{{gift[4]}}" hidden />
+          <button
+            name="action"
+            value="addCart"
+            class="btn btn-primary"
+            style="width: 100%"
+          >
+            ADD
+          </button>
+        </form>
+      </div>
+    </div>
+    {% endif %} {%endfor%}
+  </div>
+</div>
+{% endblock %} {% block scriptPage %}
+<script>
+  $("#myModal").on("shown.bs.modal", function () {
+    $("#myInput").trigger("focus");
+  });
+</script>
+
+{% endblock %}

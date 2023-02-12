@@ -1,0 +1,488 @@
+{% extends "invitation_template.html" %} {% block links %}
+<!-- Bootstrap CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="./static/5/style.css" />
+{% endblock %} {% block content %}
+<div class="container-fluid-fluid">
+  <header>
+    <!-- Background image -->
+    <div
+      class="text-center bg-image container-fluid"
+      style="
+        background: url('./static/5/graphics/bg-slide.jpg') no-repeat fixed;
+        background-size: cover;
+        background-position: bottom;
+        height: auto;
+      "
+    >
+      <div class="pb-5 mb-5">
+        <img
+          class="img-fluid text-center py-5 mb-5"
+          src="./static/5/graphics/bg-text.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </header>
+
+  <!-- Our love Story -->
+  <div class="container">
+    <h4 class="display-6 fw-bold pt-5 text-center px-3" style="color: #2e3c40">
+      Our Love Story
+    </h4>
+    <p class="text-center px-3" style="color: #ff4061">______</p>
+    <p class="text-center fs-8 px-3" style="color: #2e3c40">
+      Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat
+      laoreet. Quisque non tellus <br />
+      eleifend arcu gravida aliquam. Vivamus quis consequat nisl, nec luctus
+      libero. Nam sodales sem <br />
+      egestas sem blandit volutpat.
+    </p>
+    <div class="row py-5 text-center">
+      <div
+        class="col-lg-6 col-12 pt-5 mb-5 g-0 mx-auto"
+        style="background-color: #ff4061"
+      >
+        <h2 class="text-center pt-5 mt-5" style="color: #ffffff">
+          The First Date
+        </h2>
+        <p class="text-center mt-3" style="color: #ffffff">
+          Proin at sapien ipsum. Aenean placerat, quam ac <br />
+          tempor congue, orci est luctus ex, ut vestibulum <br />
+          ipsum nisl eu nisi.
+        </p>
+        <h2 class="text-center pt-5 mt-5" style="color: #ffffff">
+          The Second Date
+        </h2>
+        <p class="text-center mt-3" style="color: #ffffff">
+          Proin at sapien ipsum. Aenean placerat, quam ac <br />
+          tempor congue, orci est luctus ex, ut vestibulum <br />
+          ipsum nisl eu nisi.
+        </p>
+        <h2 class="text-center pt-5 mt-5" style="color: #ffffff">
+          The Third Date
+        </h2>
+        <p class="text-center mt-3" style="color: #ffffff">
+          Proin at sapien ipsum. Aenean placerat, quam ac <br />
+          tempor congue, orci est luctus ex, ut vestibulum <br />
+          ipsum nisl eu nisi.
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-12 mt-5 g-0 mx-auto">
+        <img
+          class="img-fluid w-100 h-100"
+          src="./static/5/graphics/love-story-1.jpg"
+          alt="responsive-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- wedding info -->
+  <div>
+    <h4 class="display-6 fw-bold pt-5 text-center px-3" style="color: #2e3c40">
+      Wedding Info
+    </h4>
+    <p class="text-center px-3" style="color: #ff4061">______</p>
+    <p class="text-center fs-8 px-3 pb-5" style="color: #2e3c40">
+      Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat
+      laoreet. Quisque non tellus <br />
+      eleifend arcu gravida aliquam. Vivamus quis consequat nisl
+    </p>
+  </div>
+  <div
+    class="container-fluid-fluid text-center my-5 py-5 bg-image"
+    style="
+      background: url('./static/5/graphics/bg-home1-event.jpg') no-repeat fixed;
+      background-size: cover;
+      background-position: bottom;
+      height: auto;
+    "
+  >
+    <div class="row">
+      <div
+        class="col-lg-3 col-12 bg-light text-center mx-auto px-4 border border-3 m-2 border-danger"
+      >
+        <div class="bg-white my-4 pt-4">
+          <img class="img-fluid" src="./static/5/graphics/mosque.png" alt="" />
+          <h4 class="display-6 pt-3 px-3" style="color: #2e3c40">
+            The Ceremory
+          </h4>
+          <hr />
+          <p class="mt-3 fs-6 px-3" style="color: #2e3c40">
+            <img
+              class="px-1 img-fluid"
+              src="./static/5/graphics/cal.png"
+              alt=""
+            />June 30, 2017
+          </p>
+          <p class="mt-3 fs-5 px-3" style="color: #2e3c40">
+            <img
+              class="pb-2 px-1 img-fluid"
+              src="./static/5/graphics/clock.png"
+              alt=""
+            />17:27
+          </p>
+          <p class="px-3" style="color: #2e3c40">
+            <img
+              class="img-fluid"
+              src="./static/5/graphics/location.png"
+              alt=""
+            />
+            The Mayflower Hotel 1127 Connecticut Avenue NW, Washington
+          </p>
+          <p class="px-3 fs-5" style="color: #ff4061">
+            <img
+              class="img-fluid"
+              src="./static/5/graphics/new.png"
+              alt=""
+            />Vai alla Mappa
+          </p>
+          <button
+            type="button"
+            class="btn btn-danger px-4 py-3 mx-3 my-3 rounded-pill"
+            style="background-color: #ff4061"
+          >
+            CI SONO!
+          </button>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-12 img text-center bg-light mx-auto px-4 border border-3 m-2 border-danger"
+      >
+        <div class="bg-white my-4 pt-4">
+          <img class="img-fluid" src="./static/5/graphics/glass.png" alt="" />
+          <h4 class="display-6 pt-3 px-3" style="color: #2e3c40">
+            The Reception
+          </h4>
+          <hr />
+          <p class="mt-3 fs-6 px-3" style="color: #2e3c40">
+            <img
+              class="px-1 img-fluid"
+              src="./static/5/graphics/cal.png"
+              alt=""
+            />July 1, 2017
+          </p>
+          <p class="mt-3 fs-6 px-3" style="color: #2e3c40">
+            <img
+              class="pb-2 px-1 img-fluid"
+              src="./static/5/graphics/clock.png"
+              alt=""
+            />17:27
+          </p>
+          <p class="px-3" style="color: #2e3c40">
+            <img
+              class="img-fluid"
+              src="./static/5/graphics/location.png"
+              alt=""
+            />
+            The Mayflower Hotel 1127 Connecticut Avenue NW, Washington
+          </p>
+          <p class="px-3 fs-5" style="color: #ff4061">
+            <img
+              class="img-fluid"
+              src="./static/5/graphics/new.png"
+              alt=""
+            />Vai alla Mappa
+          </p>
+          <button
+            type="button"
+            class="btn btn-danger px-4 py-3 mx-3 my-3 rounded-pill"
+            style="background-color: #ff4061"
+          >
+            CI SONO!
+          </button>
+        </div>
+      </div>
+      <div
+        class="col-lg-3 col-12 img text-center bg-light mx-auto px-4 border border-3 m-2 border-danger"
+      >
+        <div class="bg-white my-4 pt-4">
+          <img class="img-fluid" src="./static/5/graphics/spoon.png" alt="" />
+          <h4 class="display-6 pt-3 px-3" style="color: #2e3c40">The Party</h4>
+          <hr />
+          <p class="mt-3 fs-6 px-3" style="color: #2e3c40">
+            <img
+              class="px-1 img-fluid"
+              src="./static/5/graphics/cal.png"
+              alt=""
+            />July 4, 2017
+          </p>
+          <p class="mt-3 fs-6 px-3" style="color: #2e3c40">
+            <img
+              class="pb-2 px-1 img-fluid"
+              src="./static/5/graphics/clock.png"
+              alt=""
+            />17:27
+          </p>
+          <p class="px-3" style="color: #2e3c40">
+            <img
+              class="img-fluid"
+              src="./static/5/graphics/location.png"
+              alt=""
+            />
+            The Mayflower Hotel 1127 Connecticut Avenue NW, Washington
+          </p>
+          <p class="px-3 fs-5" style="color: #ff4061">
+            <img
+              class="img-fluid"
+              src="./static/5/graphics/new.png"
+              alt=""
+            />Vai alla Mappa
+          </p>
+          <button
+            type="button"
+            class="btn btn-danger px-4 py-3 mx-3 my-3 rounded-pill"
+            style="background-color: #ff4061"
+          >
+            CI SONO!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center py-5 g-0">
+      <div
+        style="color: #fff; background-color: #ff4061"
+        class="col-lg-2 col-6 py-3 g-0 px-auto mx-auto"
+      >
+        <h2>00</h2>
+        <p>DAYS</p>
+      </div>
+      <div
+        style="color: #fff; background-color: #ff4061"
+        class="col-lg-2 col-6 py-3 g-0 px-auto mx-auto"
+      >
+        <h2>00</h2>
+        <p>HOURS</p>
+      </div>
+      <div
+        style="color: #fff; background-color: #ff4061"
+        class="col-lg-2 col-6 py-3 g-0 px-auto mx-auto"
+      >
+        <h2>00</h2>
+        <p>MINS</p>
+      </div>
+      <div
+        style="color: #fff; background-color: #ff4061"
+        class="col-lg-2 col-6 py-3 g-0 px-auto mx-auto"
+      >
+        <h2>00</h2>
+        <p>SECS</p>
+      </div>
+    </div>
+    <!-- Prepration -->
+  </div>
+  <div class="container-fluid pb-5">
+    <h4 class="display-6 fw-bold pt-5 text-center px-3" style="color: #2e3c40">
+      Groomsmen & Bridesmaids
+    </h4>
+    <p class="text-center px-3" style="color: #ff4061">______</p>
+    <p class="text-center fs-8 px-3 pb-5" style="color: #2e3c40">
+      Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat
+      laoreet. Quisque non tellus <br />
+      eleifend arcu gravida aliquam. Vivamus quis consequat nisl
+    </p>
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="couples" style="overflow: hidden">
+          <img
+            src="./static/5/graphics/img-team-2-360x360.jpg"
+            class="couple border bg-white rounded-circle mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded"
+            alt="..."
+          />
+        </div>
+        <h4 class="display-8 pt-5 text-center px-3" style="color: #2e3c40">
+          Melissa Gilmore
+        </h4>
+        <p class="text-center fs-8 px-3 pb-3" style="color: #2e3c40">
+          Contrary to popular belief, Lorem Ipsum is not <br />
+          simply random text. It has roots in a piece
+        </p>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="couples" style="overflow: hidden">
+          <img
+            src="./static/5/graphics/img-team-3-360x360.jpg"
+            class="couple border bg-white rounded-circle mx-auto d-block shadow-lg p-2 mb-5 bg-body rounded"
+            alt="..."
+          />
+        </div>
+        <h4 class="display-8 pt-5 text-center px-3" style="color: #2e3c40">
+          Melissa Gilmore
+        </h4>
+        <p class="text-center fs-8 px-3 pb-3" style="color: #2e3c40">
+          Contrary to popular belief, Lorem Ipsum is not <br />
+          simply random text. It has roots in a piece
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- guest -->
+  <div
+    class="bg-image container-fluid-fluid"
+    style="
+      background: url('./static/5/graphics/bg-guestbook.jpg') no-repeat fixed;
+      background-size: cover;
+      background-position: bottom;
+      height: auto;
+    "
+  >
+    <h4 class="display-6 fw-bold pt-5 text-center px-3" style="color: #ffffff">
+      Latest Guestbook
+    </h4>
+    <p class="text-center px-3 pb-3" style="color: #ffffff">______</p>
+    <div class="couples" style="overflow: hidden">
+      <img
+        src="./static/5/graphics/guestbook3.jpg"
+        class="couple border bg-white rounded-circle mx-auto d-block shadow-lg p-1 mb-5 bg-body rounded"
+        alt="..."
+      />
+    </div>
+    <p class="text-center" style="color: #fff">
+      In commodo dolor vitae sem vulputate pellentesque. Aliquam sit amet mattis
+      mi. Proin sed nulla mi. Curabitur <br />
+      commodo Amet leo dignissim, id tempus nisl pellentesque. Interdum et
+      malesuada fames ac ante ipsum primis in <br />
+      faucibus. Morbi lobortis ultrices purus, at tempor risus imperdiet sit
+      amet. Nullam sit amet congue nulla.
+    </p>
+    <div class="py-3 text-center">
+      <img
+        class="img-fluid text-center"
+        src="./static/5/graphics/lock.png"
+        alt=""
+      />
+    </div>
+    <h6 class="text-center display-6" style="color: #fff">Kassi Absar 2</h6>
+    <p class="text-center" style="color: #fff">Marry's friend</p>
+    <div class="text-center pb-5">
+      <button
+        type="button"
+        class="dropbtn text-center btn btn-outline-light px-4 py-3 rounded-pill"
+      >
+        DROP US A LINE
+      </button>
+    </div>
+  </div>
+  <!-- services -->
+  <div class="container-fluid mb-5">
+    <h4 class="display-6 fw-bold pt-5 text-center px-3" style="color: #2e3c40">
+      Registry Gifts
+    </h4>
+    <p class="text-center px-3" style="color: #ff4061">______</p>
+    <p class="text-center fs-8 px-3" style="color: #2e3c40">
+      Quisque nec facilisis sem. In at commodo velit. Aliquam tempor volutpat
+      laoreet. Quisque non tellus <br />
+      eleifend arcu gravida aliquam. Vivamus quis consequat nisl, nec luctus
+      libero. Nam sodales sem <br />
+      egestas sem blandit volutpat.
+    </p>
+    <div class="row g-0 mx-auto text-center">
+      <div class="col-lg-3 col-md-6 col-12">
+        <img
+          class="img-fluid py-3"
+          src="./static/5/graphics/client-1.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <img
+          class="img-fluid py-3"
+          src="./static/5/graphics/client-2.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <img
+          class="img-fluid py-3"
+          src="./static/5/graphics/client-3.png"
+          alt=""
+        />
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <img
+          class="img-fluid py-3"
+          src="./static/5/graphics/client-4.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- contact us -->
+  <div
+    class="container-fluid-fluid text-center my-5 bg-image"
+    style="
+      background: url('./static/5/graphics/bg-home1-form.jpg') no-repeat fixed;
+      background-size: cover;
+      background-position: bottom;
+      height: auto;
+    "
+  >
+    <h4 class="display-6 fw-bold pt-5 text-center px-3" style="color: #ffffff">
+      Contact us
+    </h4>
+    <p class="text-center px-3" style="color: #ff4061">______</p>
+    <form style="width: 50%" class="mx-auto pb-5">
+      <!-- Name input -->
+      <div class="form-outline mb-4 mx-auto">
+        <input
+          type="text"
+          id="form4Example1"
+          class="form-control"
+          placeholder="Name"
+          style="border: 2px solid #ff4061"
+        />
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input
+          type="email"
+          id="form4Example2"
+          class="form-control"
+          placeholder="Email address"
+          style="border: 2px solid#ff4061"
+        />
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <textarea
+          class="form-control"
+          id="form4Example3"
+          rows="4"
+          placeholder="Message"
+          style="border: 2px solid #ff4061"
+        ></textarea>
+      </div>
+
+      <!-- Submit button -->
+      <button
+        type="button"
+        class="dropbtn text-center btn btn-outline-light px-5 py-3 rounded-pill"
+      >
+        Send me
+      </button>
+    </form>
+  </div>
+  {% endblock %} {%block footer %}
+  <footer class="container-fluid py-1" style="background-color: #ffffff">
+    <h3 class="text-center" style="color: #ff4061">
+      Dennis<img src="./static/5/graphics/unknown.png" alt="" />Judith
+    </h3>
+    <p class="text-center" style="color: #2e3c40">
+      Made with love by Arrowhitech
+    </p>
+  </footer>
+</div>
+
+{% endblock %}

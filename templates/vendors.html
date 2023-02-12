@@ -1,0 +1,62 @@
+{% extends "default_user.html" %} {%block title%} Vendors {% endblock %} {%block
+content%}
+<div class="pt-5">
+  <form action="/vendors" method="GET">
+    <div class="input-group d-flex justify-content-center">
+      <div class="form-group border" style="border-color: #d4b99a !important">
+        <select class="form-control border-0" name="category">
+          <option>All Categories</option>
+          {% for category in categories %}
+          <option>{{category[0]}}</option>
+          {%endfor%}
+        </select>
+      </div>
+      <div class="form-group border" style="border-color: #d4b99a !important">
+        <select class="form-control border-0" name="city">
+          <option>All Cities</option>
+          {% for city in cities %}
+          <option>{{city[0]}}</option>
+          {%endfor%}
+        </select>
+      </div>
+      <button
+        id="search-button"
+        type="submit"
+        class="btn border-0 navigation-color text-white"
+        style="background-color: #e6d7c6; border: 1px solid #ceb08d"
+      >
+        <strong>Go</strong>
+      </button>
+    </div>
+  </form>
+  <div class="row mt-5 pb-5">
+    {% for vendor in vendors %}
+
+    <div class="card mx-auto my-auto mt-3" style="width: 15rem">
+      <a href="/vendor-category?id={{vendor[4]}}">
+        <img
+          class="
+            card-img-top
+            rounded-circle
+            mt-4
+            mx-auto
+            d-flex
+            justify-content-center
+          "
+          style="width: 12rem"
+          src="{{vendor[0]}}"
+          alt="Card image cap"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title text-center col-12 text-truncate">
+          {{vendor[1]}}
+        </h5>
+        <p class="card-text text-center">{{vendor[2]}}</p>
+      </div>
+    </div>
+
+    {%endfor%}
+  </div>
+</div>
+{% endblock %}
