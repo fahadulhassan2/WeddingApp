@@ -1,2 +1,2 @@
 # WeddingApp
-wedding app for virtual inviation and admin 
+wedding app for virtual inviation and admin. 
